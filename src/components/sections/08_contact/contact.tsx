@@ -37,15 +37,15 @@ const Contact = () => {
 
   return (
     <section className='mt-10'>
-      <h1 className='text-center text-5xl'>Get in touch!</h1>
+      <h2 className='text-center text-5xl'>Get in touch!</h2>
       <div className="flex flex-row items-center justify-center my-8 w-full gap-4">
         {contact.map((item, index) => (
-          <>
-            <ContactItem key={`contact-item-${index}`} {...item} />
+          <React.Fragment key={`contact-item-${index}`}>
+            <ContactItem {...item} />
             {index !== contact.length - 1 && 
-              <ChevronRight key={`contact-arrow-${index}`} className="w-10 h-10" />
+              <ChevronRight className="w-10 h-10" />
             }
-          </>
+        </React.Fragment>
         ))}
       </div>
     </section>

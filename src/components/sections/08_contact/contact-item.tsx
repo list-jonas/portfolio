@@ -13,39 +13,39 @@ export interface ContactItemProps {
   element: JSX.Element;
 }
 
-const ContactItem: React.FC<ContactItemProps> = (item) => {
-  const getRandomRotation = () => {
-    return Math.floor(Math.random() * 30) - 15;
-  };
+const getRandomRotation = () => {
+  return Math.floor(Math.random() * 30) - 15;
+};
 
-  const contactVariants: Variants = {
-    offscreen: {
-      x: -400,
-      y: getRandomRotation()*3,
-      opacity: 0
-    },
-    onscreen: {
-      x: 0,
-      y: 0,
-      opacity: 1,
-      rotate: getRandomRotation(),
-      transition: {
-        type: "spring",
-        bounce: 0.4,
-        duration: 0.8
-      }
-    },
-    hover: {
-      y: -10,
-      rotate: getRandomRotation(),
-      scale: 1.1,
-      transition: {
-        type: "spring",
-        stiffness: 300,
-      }
+const contactVariants: Variants = {
+  offscreen: {
+    x: -400,
+    y: getRandomRotation()*3,
+    opacity: 0
+  },
+  onscreen: {
+    x: 0,
+    y: 0,
+    opacity: 1,
+    rotate: getRandomRotation(),
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 0.8
     }
-  };
+  },
+  hover: {
+    y: -10,
+    rotate: getRandomRotation(),
+    scale: 1.1,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+    }
+  }
+};
 
+const ContactItem: React.FC<ContactItemProps> = (item) => {
   return (
     <motion.a
       className="relative flex flex-col items-center justify-center p-4"
