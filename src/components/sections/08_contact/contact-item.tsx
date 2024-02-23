@@ -64,7 +64,7 @@ const ContactItem: React.FC<ContactItemProps> = (item) => {
       </div>
 
       <motion.span
-        className={`absolute w-28 h-28 rounded-lg ${item.color}`}
+        className={`absolute w-28 h-28 rounded-3xl ${item.color}`}
         variants={contactVariants}
         onHoverStart={(e) => e.preventDefault()}
       />

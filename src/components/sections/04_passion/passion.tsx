@@ -6,7 +6,7 @@ import React from 'react';
 
 const Passion = () => {
   return (
-    <div className='mt-10 grid max-md:grid-rows-3 md:grid-cols-2 h-min'>
+    <section className='mt-10 grid max-md:grid-rows-3 md:grid-cols-2 h-min'>
       <motion.span
         initial={{ x: -100, rotate: -2}}
         animate={{ x: -50, rotate: 6 }}
@@ -20,7 +20,7 @@ const Passion = () => {
         I thrive on solving problems and<br />
         building solutions that matter.
       </p>
-    </div>
+    </section>
   );
 };
 

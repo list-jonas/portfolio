@@ -1,6 +1,7 @@
 import React from 'react';
 import { ChevronRight, Github, Linkedin, Mail } from 'lucide-react';
 import ContactItem, { ContactItemProps } from './contact-item';
+import BgGradient from '@/components/bg-gradient';
 
 
 
@@ -48,6 +49,8 @@ const Contact = () => {
         </React.Fragment>
         ))}
       </div>
+
+      <BgGradient bottom={-5} left={4} size={20} color='red-500' />
     </section>
   );
 };

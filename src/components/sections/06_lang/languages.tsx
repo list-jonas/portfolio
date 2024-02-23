@@ -1,3 +1,4 @@
+import BgGradient from '@/components/bg-gradient';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import ParallaxText from '@/components/ui/parallax-text';
@@ -38,7 +39,7 @@ const languages = [{
 
 const Languages = () => {
   return (
-    <div className='mt-10 flex flex-col w-full'>
+    <section className='relative mt-10 flex flex-col w-full'>
       <p className='text-lg'>
         Beyond my main stack, I&apos;m fluent in multiple programming languages. Each one is a new perspective on problem-solving.
       </p>
@@ -56,7 +57,9 @@ const Languages = () => {
           ))}
         </ParallaxText>
       </div>
-    </div>
+
+      <BgGradient bottom={-5} right={-10} size={20} color='orange-500' opacity={.2} />
+    </section>
   );
 };
 

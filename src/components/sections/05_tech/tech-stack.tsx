@@ -84,7 +84,7 @@ const techStack: (TechStackItem)[] = [{
 
 const TechStack = () => {
   return (
-    <div className='mt-10 grid grid-rows-3 auto-rows-min h-min'>
+    <section className='mt-10 grid grid-rows-3 auto-rows-min h-min'>
       <p className='text-lg my-auto'>
         Here&apos;s where my creativity meets functionality.
       </p>
@@ -123,7 +123,7 @@ const TechStack = () => {
           )
         })}
       </div>
-    </div>
+    </section>
   );
 };
 

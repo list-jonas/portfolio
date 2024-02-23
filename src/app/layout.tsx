@@ -29,7 +29,7 @@ export default function RootLayout({
           <nav className="top-0 w-full h-15 z-50 flex justify-end p-2">
             <ThemeToggle />
           </nav>
-          <main className="p-2 flex justify-center overflow-hidden pb-20">
+          <main className="relative p-2 flex justify-center overflow-hidden pb-20 z-20">
             {children}
           </main>
         </ThemeProvider>

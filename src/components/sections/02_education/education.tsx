@@ -6,7 +6,7 @@ import React from 'react';
 
 const Education = () => {
   return (
-    <div className='mt-10 w-full grid max-md:grid-rows-3 md:grid-cols-2'>
+    <section className='mt-10 w-full grid max-md:grid-rows-3 md:grid-cols-2'>
       <motion.span
         initial={{ x: -100, rotate: -2}}
         animate={{ x: 0, rotate: -1 }}
@@ -19,7 +19,7 @@ const Education = () => {
         <br />
         student at HTBLA Kaindorf
       </p>
-    </div>
+    </section>
   );
 };
 

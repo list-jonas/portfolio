@@ -6,7 +6,7 @@ import React from 'react';
 
 const Origin = () => {
   return (
-    <div className='max-md:mt-10 grid max-md:grid-rows-3 md:grid-cols-2'>
+    <section className='max-md:mt-10 grid max-md:grid-rows-3 md:grid-cols-2'>
       <span className='h-min w-full text-xl my-auto'>
         ... from the heart of Austria.
       </span>
@@ -17,7 +17,7 @@ const Origin = () => {
       >
         <Image src='/images/austria.jpg' height={640} width={426} alt='Austria' className='w-full' />
       </motion.span>
-    </div>
+    </section>
   );
 };
 
