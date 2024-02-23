@@ -7,7 +7,7 @@ const Title = () => {
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.8 }}
-      className="text-5xl font-bold text-center my-20"
+      className="text-5xl font-bold text-center mt-20 mb-10"
     >
       <div className='mb-4'>
         Hi!

@@ -25,7 +25,7 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
         const visibleRepeats = Math.ceil(window.innerWidth / childWidth);
         const totalRepeats = Math.ceil(containerWidth / childWidth) + visibleRepeats;
 
-        setRepeatCount(totalRepeats);
+        setRepeatCount(totalRepeats + 1);
       }
     };
 

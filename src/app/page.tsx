@@ -1,11 +1,15 @@
-import Hero from "@/components/sections/01_hero/hero";
-import Education from "@/components/sections/02_education/education";
-import Contact from "@/components/sections/08_contact/contact";
-import Origin from "@/components/sections/03_origin/origin";
-import Passion from "@/components/sections/04_passion/passion";
-import TechStack from "@/components/sections/05_tech/tech-stack";
-import Languages from "@/components/sections/06_lang/languages";
-import WhatIdo from "@/components/sections/07_what-i-do/what-i-do";
+import dynamic from "next/dynamic";
+
+const Hero = dynamic(() => import("@/components/sections/01_hero/hero"));
+const Education = dynamic(() => import("@/components/sections/02_education/education"));
+const Contact = dynamic(() => import("@/components/sections/08_contact/contact"));
+const Origin = dynamic(() => import("@/components/sections/03_origin/origin"));
+const Passion = dynamic(() => import("@/components/sections/04_passion/passion"));
+const TechStack = dynamic(() => import("@/components/sections/05_tech/tech-stack"));
+const Languages = dynamic(() => import("@/components/sections/06_lang/languages"));
+const WhatIdo = dynamic(() => import("@/components/sections/07_what-i-do/what-i-do"));
+
+import { ChevronUpCircle } from "lucide-react";
 
 export default function Home() {
   return (
@@ -18,6 +22,12 @@ export default function Home() {
       <Languages />
       <WhatIdo />
       <Contact />
+
+      <div className="flex justify-center my-40">
+        <a href="#top" className="text-4xl">
+          <ChevronUpCircle size={50} className="text-muted-foreground" />
+        </a>
+      </div>
     </div>
   );
 }

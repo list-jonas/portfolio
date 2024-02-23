@@ -37,7 +37,7 @@ const Contact = () => {
   ];
 
   return (
-    <section className='mt-10'>
+    <section id='contact' className='mt-10 relative'>
       <h2 className='text-center text-5xl'>Get in touch!</h2>
       <div className="flex flex-row items-center justify-center my-8 w-full gap-4">
         {contact.map((item, index) => (
@@ -50,7 +50,7 @@ const Contact = () => {
         ))}
       </div>
 
-      <BgGradient bottom={-5} left={4} size={20} color='red-500' />
+      <BgGradient bottom={-10} left={4} size={20} color='red-500' />
     </section>
   );
 };
