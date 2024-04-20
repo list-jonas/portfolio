@@ -6,6 +6,8 @@ import { ThemeToggle } from "@/components/theme/theme-toggle";
 import { cn } from "@/lib/utils";
 import { Suspense } from "react";
 import Loading from "./loading";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +24,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn("flex flex-col ", inter.className)}>
+        <Analytics />
+        <SpeedInsights />
+      
         <Suspense fallback={<Loading />} >
           <ThemeProvider
             attribute="class"
