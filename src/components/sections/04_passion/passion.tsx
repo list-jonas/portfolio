@@ -15,8 +15,8 @@ const Passion = () => {
         <Image src='/images/digitization.jpg' height={427} width={640} alt='Austria' />
       </motion.span>
       <p className='h-min w-full text-right text-xl my-auto'>
-        Programming isn't just a skill,<br />
-        it's my way of making ideas tangible.<br />
+        Programming isn&apos;t just a skill,<br />
+        it&apos;s my way of making ideas tangible.<br />
         I thrive on solving problems and<br />
         building solutions that matter.
       </p>

@@ -52,6 +52,7 @@ const ContactItem: React.FC<ContactItemProps> = (item) => {
       initial="offscreen"
       whileInView="onscreen"
       whileHover="hover"
+      target="_blank"
       viewport={{ once: true, amount: 0.8 }}
       href={item.href}
     >
