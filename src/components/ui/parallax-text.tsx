@@ -21,7 +21,7 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
     const calculateRepeats = () => {
       if (containerRef.current && children) {
         const containerWidth = containerRef.current.offsetWidth;
-        const childWidth = containerRef.current.firstChild!.offsetWidth;
+        const childWidth = (containerRef.current.firstChild as HTMLDivElement).offsetWidth;
         const visibleRepeats = Math.ceil(window.innerWidth / childWidth);
         const totalRepeats = Math.ceil(containerWidth / childWidth) + visibleRepeats;
 
