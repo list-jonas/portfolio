@@ -40,6 +40,15 @@ jobs:
       - name: Build with Next.js 🏗️
         run: npx next build
 
+      - name: List .next directory
+        run: ls -alh ./.next
+
+      - name: Export with Next.js 🏗️
+        run: npm run build
+
+      - name: List project root directory
+        run: ls -alh
+
       - name: List build directory
         run: ls -alh ./out
 
