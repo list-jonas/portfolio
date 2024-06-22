@@ -4,8 +4,10 @@ const nextConfig = {
   output: "export",
   distDir: 'out',
   reactStrictMode: true,
-  images: {
-    unoptimized: true,
+  experimental: {
+    images: {
+      unoptimized: true,
+    },
   },
 };
 
