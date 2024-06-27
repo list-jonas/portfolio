@@ -1,14 +1,7 @@
 import BgGradient from '@/components/bg-gradient';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
-import ParallaxText from '@/components/ui/parallax-text';
 import Image from 'next/image';
 import React from 'react';
-
-interface ILanguage {
-  name: string;
-  icon: string;
-}
+import './languages.css';
 
 const languages = [{
   name: 'TypeScript',
@@ -43,19 +36,22 @@ const Languages = () => {
       <p className='text-lg'>
         Beyond my main stack, I&apos;m fluent in multiple programming languages. Each one is a new perspective on problem-solving.
       </p>
-      <div className='w-full row-span-2 my-8'>
-        <ParallaxText baseVelocity={2}>
+
+      <div className='relative w-full flex overflow-x-hidden [mask-image:linear-gradient(_to_right,_rgba(0,_0,_0,_0),_rgba(0,_0,_0,_1)_20%,_rgba(0,_0,_0,_1)_80%,_rgba(0,_0,_0,_0)_)]'>
+        <div className="py-12 animate-marquee whitespace-nowrap flex flex-row mx-0">
           {languages.map((language, index) => (
-            <div key={`lang-${index}`} className='w-[180px] border rounded-lg'>
-              <div className='text-center text-lg font-bold'>
-                {language.name}
-              </div>
-              <div className='h-28 aspect-square'>
-                <Image src={language.icon} height={98} width={98} alt={language.name} className='m-auto select-none' />
-              </div>
+            <div key={index} className='w-[98px] h-[98px] text-center'>
+              <Image src={language.icon} height={98} width={98} alt={language.name} className='m-auto select-none language-logo' />
             </div>
           ))}
-        </ParallaxText>
+        </div>
+        <div className="absolute top-0 py-12 animate-marquee2 whitespace-nowrap flex flex-row mx-0">
+          {languages.map((language, index) => (
+            <div key={index} className='w-[98px] h-[98px] text-center'>
+              <Image src={language.icon} height={98} width={98} alt={language.name} className='m-auto select-none language-logo' />
+            </div>
+          ))}
+        </div>
       </div>
 
       <BgGradient bottom={-5} right={-10} size={20} color='orange-500' opacity={.2} />
