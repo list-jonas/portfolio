@@ -1,4 +1,7 @@
+"use client";
+
 import { cn } from '@/lib/utils';
+import { motion } from 'framer-motion';
 import { Blocks, CheckCircle, Cloud, Code, Database, GitBranch, Layers } from 'lucide-react';
 import React from 'react';
 
@@ -83,6 +86,11 @@ const techStack: (TechStackItem)[] = [{
 }];
 
 const TechStack = () => {
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <section className='mt-10 grid grid-rows-3 auto-rows-min h-min'>
       <p className='text-lg my-auto'>
@@ -110,16 +118,24 @@ const TechStack = () => {
             )}/>;
 
           return (
-            <div key={`tech-stack-item-${index}`} className={cn(
-              `rounded-lg shadow-lg ${item.color} text-white text-center relative h-12`,
-              item.type === ETechStackType.FULL_STACK && 'col-span-2',
-              item.type === ETechStackType.TOOLS && 'hidden sm:block',
-              item.type === ETechStackType.DATABASE && 'hidden md:block',
-              item.type === ETechStackType.TESTING && 'hidden lg:block',
-            )}>
+            <motion.div 
+              key={`tech-stack-item-${index}`} 
+              className={cn(
+                `rounded-lg shadow-lg cursor-default ${item.color} text-white text-center relative h-12`,
+                item.type === ETechStackType.FULL_STACK && 'col-span-2',
+                item.type === ETechStackType.TOOLS && 'hidden sm:block',
+                item.type === ETechStackType.DATABASE && 'hidden md:block',
+                item.type === ETechStackType.TESTING && 'hidden lg:block',
+              )}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              variants={itemVariants}
+              transition={{ duration: 0.3, delay: index * 0.1 }}
+            >
               <span className='absolute left-2 top-3'>{item.icon}</span>
               <p className='leading-[3rem]'>{item.name}</p>
-            </div>
+            </motion.div>
           )
         })}
       </div>
