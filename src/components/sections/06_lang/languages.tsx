@@ -5,50 +5,73 @@ import './languages.css';
 
 const languages = [{
   name: 'TypeScript',
-  icon: "/images/typescript.png",
+  icon: "/images/skills/TypeScript.svg",
 }, {
   name: 'Python',
-  icon: "/images/python.png",
+  icon: "/images/skills/Python-Dark.svg",
 }, {
   name: 'Go',
-  icon: "/images/golang.png",
+  icon: "/images/skills/GoLang.svg",
 }, {
   name: 'Java',
-  icon: "/images/java-coffee-cup-logo.png",
+  icon: "/images/skills/Java-Dark.svg",
 }, {
   name: 'C#',
-  icon: "/images/c-sharp-logo.png",
-  color: 'bg-purple-500',
+  icon: "/images/skills/CS.svg",
 }, {
   name: 'C++',
-  icon: "/images/c-plus-plus-logo.png",
+  icon: "/images/skills/CPP.svg",
 }, {
   name: 'JavaScript',
-  icon: "/images/javascript.png",
+  icon: "/images/skills/JavaScript.svg",
 }, {
   name: 'Swift',
-  icon: "/images/swift.png",
+  icon: "/images/skills/Swift.svg",
+}, {
+  name: 'Kotlin',
+  icon: "/images/skills/Kotlin-Dark.svg",
+}, {
+  name: 'Rust',
+  icon: "/images/skills/Rust.svg",
+}, {
+  name: 'PHP',
+  icon: "/images/skills/PHP-Dark.svg",
+}, {
+  name: 'SQL',
+  icon: "/images/skills/PostgreSQL-Dark.svg",
+}, {
+  name: 'HTML',
+  icon: "/images/skills/HTML.svg",
+}, {
+  name: 'CSS',
+  icon: "/images/skills/CSS.svg",
+}, {
+  name: 'Markdown',
+  icon: "/images/skills/Markdown-Dark.svg",
+}, {
+  name: 'Dart',
+  icon: "/images/skills/Dart-Dark.svg",
 }];
 
 const Languages = () => {
   return (
     <section className='relative mt-10 flex flex-col w-full'>
       <p className='text-lg'>
-        Beyond my main stack, I&apos;m fluent in multiple programming languages. Each one is a new perspective on problem-solving.
+        Beyond my main stack, I have written code in multiple programming languages. Each one is a new perspective on problem-solving.
       </p>
 
-      <div className='relative w-full flex overflow-x-hidden [mask-image:linear-gradient(_to_right,_rgba(0,_0,_0,_0),_rgba(0,_0,_0,_1)_20%,_rgba(0,_0,_0,_1)_80%,_rgba(0,_0,_0,_0)_)]'>
-        <div className="py-12 animate-marquee whitespace-nowrap flex flex-row mx-0">
+      <div className='relative w-full flex overflow-x-hidden [mask-image:linear-gradient(_to_right,_rgba(0,_0,_0,_0),_rgba(0,_0,_0,_1)_20%,_rgba(0,_0,_0,_1)_80%,_rgba(0,_0,_0,_0)_)] my-12'>
+        <div className="animate-marquee whitespace-nowrap flex flex-row mx-0">
           {languages.map((language, index) => (
-            <div key={index} className='w-[98px] h-[98px] text-center'>
-              <Image src={language.icon} height={98} width={98} alt={language.name} className='m-auto select-none language-logo' />
+            <div key={index} className='mx-2 h-[96px] aspect-square'>
+              <Image src={language.icon} height={96} width={96} alt={language.name} className='select-none' />
             </div>
           ))}
         </div>
-        <div className="absolute top-0 py-12 animate-marquee2 whitespace-nowrap flex flex-row mx-0">
+        <div className="absolute top-0 animate-marquee2 whitespace-nowrap flex flex-row mx-0">
           {languages.map((language, index) => (
-            <div key={index} className='w-[98px] h-[98px] text-center'>
-              <Image src={language.icon} height={98} width={98} alt={language.name} className='m-auto select-none language-logo' />
+            <div key={index} className='mx-2 h-[96px] aspect-square'>
+              <Image src={language.icon} height={96} width={96} alt={language.name} className='select-none' /> {/* filter grayscale-[100%] */}
             </div>
           ))}
         </div>

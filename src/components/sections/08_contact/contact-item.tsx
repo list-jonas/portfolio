@@ -1,7 +1,6 @@
 "use client";
 
 import { Variants, motion,  } from 'framer-motion';
-import { get } from 'http';
 import React from 'react';
 
 export interface ContactItemProps {
