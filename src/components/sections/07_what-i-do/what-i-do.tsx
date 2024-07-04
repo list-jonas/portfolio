@@ -22,9 +22,9 @@ const WhatIdo = () => {
           </div>
         </div>
 
-        <div className='rounded-3xl h-[230px] max-sm:w-full sm:aspect-square bg-gradient-to-br from-orange-500 to-orange-400 flex flex-col'>
+        <div className='rounded-3xl h-[230px] max-sm:w-full sm:aspect-square bg-gradient-to-br from-orange-500 to-orange-400 flex flex-col pt-6 px-6 overflow-hidden'>
           <Responsive />
-          <div className='h-1/4 text-center'>
+          <div className='h-1/4 text-center mt-4'>
             <h3 className='text-lg font-bold'>Responsive</h3>
             (hover / click)
           </div>
