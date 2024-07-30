@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils';
 import { cva, VariantProps } from 'class-variance-authority';
-import React from 'react';
+import React, { ElementType } from 'react';
 
 const textVariants = cva(
   '',
@@ -16,6 +16,7 @@ const textVariants = cva(
         p: "text-lg sm:text-2xl",
         h1: "text-5xl md:text-6xl lg:text-7xl xl:text-8xl",
         h2: "",
+        h3: "text-3xl sm:text-4xl",
       },
     },
     defaultVariants: {
@@ -26,26 +27,24 @@ const textVariants = cva(
 );
 
 export interface TextProps
-  extends React.HTMLAttributes<HTMLHeadingElement | HTMLSpanElement>,
+  extends React.HTMLAttributes<HTMLHeadingElement | HTMLParagraphElement | HTMLSpanElement>,
     VariantProps<typeof textVariants> {
   asChild?: boolean;
 }
 
 const Text = React.forwardRef<HTMLElement, TextProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
-    let Component: React.ElementType = 'span';
+    let Component: ElementType;
 
     if (size === 'p') Component = 'p';
     else if (size === 'h1') Component = 'h1';
     else if (size === 'h2') Component = 'h2';
-
-
-    if (asChild) Component = React.Fragment;
+    else Component = 'span';
 
     return (
       <Component
         className={cn(textVariants({ variant, size }), className)}
-        ref={ref}
+        ref={ref as React.Ref<any>}
         {...props}
       />
     );

@@ -5,7 +5,7 @@ import { Button } from './ui/button';
 const LangSelection = () => {
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger>
+      <DropdownMenuTrigger asChild>
         <Button variant="outline">EN</Button>
       </DropdownMenuTrigger>
     </DropdownMenu>

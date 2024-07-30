@@ -93,11 +93,12 @@ const TechStack = () => {
   };
 
   return (
-    <section className='py-20'>
+    <section className='py-20 sm:container'>
       <Text size="h2" variant="h2">Tech Stack</Text>
-      <Text size="p" className='mb-4'>
+      <Text size="p" className='mb-10'>
         Here&apos;s where my creativity meets functionality.
       </Text>
+
       <div className='row-span-2 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-1'>
         {Object.values(ETechStackType).map((type, index) => {
           if (type === ETechStackType.FULL_STACK) return null;

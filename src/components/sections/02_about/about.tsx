@@ -3,7 +3,7 @@ import React from 'react';
 
 const About = () => {
   return (
-    <section className='py-20'>
+    <section className='py-20 sm:container'>
       <Text size="h2" variant="h2">About me</Text>
       <Text size="p">
         Hi there! I&apos;m a computer science student and software engineer based in <Text variant="gradient">Austria</Text>. 

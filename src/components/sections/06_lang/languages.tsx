@@ -89,13 +89,15 @@ const languages = [{
 
 const Languages = () => {
   return (
-    <section className='relative py-20 flex flex-col'>
-      <Text size="h2" variant="h2">Languages & Tools</Text>
-      <Text size="p">
-        Beyond my main stack, I have written code in multiple programming languages. Each one is a new perspective on problem-solving.
-      </Text>
+    <section className='relative py-20 flex flex-col w-full'>
+      <div className='sm:container'>
+        <Text size="h2" variant="h2">Languages & Tools</Text>
+        <Text size="p">
+          Beyond my main stack, I have written code in multiple programming languages. Each one is a new perspective on problem-solving.
+        </Text>
+      </div>
 
-      <div className='relative w-full flex overflow-x-hidden [mask-image:linear-gradient(_to_right,_rgba(0,_0,_0,_0),_rgba(0,_0,_0,_1)_20%,_rgba(0,_0,_0,_1)_80%,_rgba(0,_0,_0,_0)_)] my-12'>
+      <div className='relative w-screen overflow-hidden flex overflow-x-hidden [mask-image:linear-gradient(_to_right,_rgba(0,_0,_0,_0),_rgba(0,_0,_0,_1)_20%,_rgba(0,_0,_0,_1)_80%,_rgba(0,_0,_0,_0)_)] my-12'>
         <div className="animate-marquee whitespace-nowrap flex flex-row mx-0">
           {languages.map((language, index) => (
             <div key={index} className='mx-2 h-[96px] aspect-square'>

@@ -38,8 +38,8 @@ const Contact = () => {
   ];
 
   return (
-    <section id='contact' className='py-20 relative'>
-      <Text size="h2" variant="h2">Get in touch!</Text>
+    <footer id='contact' className='py-20 relative'>
+      <Text size="h2" variant="h2" className='sm:container'>Get in touch!</Text>
       <div className="flex flex-row items-center justify-center my-8 w-full gap-4">
         {contact.map((item, index) => (
           <React.Fragment key={`contact-item-${index}`}>
@@ -52,7 +52,7 @@ const Contact = () => {
       </div>
 
       <BgGradient bottom={-10} left={4} size={20} color='red-500' />
-    </section>
+    </footer>
   );
 };
 

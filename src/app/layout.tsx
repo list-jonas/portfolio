@@ -20,7 +20,6 @@ const generalSans = localfont({
   }],
   variable: "--font-general-sans",
 });
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Jonas List Portfolio",
@@ -34,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body style={{height: "100%"}} className={cn("flex flex-col", generalSans.className)}>
+      <body style={{height: "100%"}} className={generalSans.className}>
         <Analytics />
         <SpeedInsights />
       
@@ -45,18 +44,22 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <nav className="w-full sm:container flex justify-between my-5">
-              <Logo height={80} width={80} />
-              <div className="my-auto flex flex-row gap-2 md:gap-4 mr-2">
-                <LangSelection />
-                <ThemeToggle />
-                <Button className="font-normal">Contact<ChevronDown className="ml-2" /></Button>
-              </div>
-            </nav>
-            
-            <main className="relative p-2 flex justify-center overflow-hidden">
-              {children}
-            </main>
+            <div className="relative">
+              <nav className="absolute top-0 left-0 right-0 z-50 py-5">
+                <div className="w-full sm:container flex justify-between">
+                  <Logo height={80} width={80} />
+                  <div className="my-auto flex flex-row gap-2 md:gap-4 mr-2">
+                    <LangSelection />
+                    <ThemeToggle />
+                    <Button className="font-normal" asChild><a href="#contact">Contact<ChevronDown className="ml-2" /></a></Button>
+                  </div>
+                </div>
+              </nav>
+              
+              <main className="relative p-2 flex justify-center top-36 overflow-x-hidden">
+                {children}
+              </main>
+            </div>
           </ThemeProvider>
         </Suspense>
       </body>
