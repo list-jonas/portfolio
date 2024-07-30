@@ -1,5 +1,6 @@
 "use client";
 
+import Text from '@/components/text';
 import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
 import { Blocks, CheckCircle, Cloud, Code, Database, GitBranch, Layers } from 'lucide-react';
@@ -92,10 +93,11 @@ const TechStack = () => {
   };
 
   return (
-    <section className='mt-10 grid grid-rows-3 auto-rows-min h-min'>
-      <p className='text-lg my-auto'>
+    <section className='py-20'>
+      <Text size="h2" variant="h2">Tech Stack</Text>
+      <Text size="p" className='mb-4'>
         Here&apos;s where my creativity meets functionality.
-      </p>
+      </Text>
       <div className='row-span-2 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-1'>
         {Object.values(ETechStackType).map((type, index) => {
           if (type === ETechStackType.FULL_STACK) return null;

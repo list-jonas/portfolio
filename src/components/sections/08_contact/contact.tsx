@@ -2,6 +2,7 @@ import React from 'react';
 import { ChevronRight, Github, Linkedin, Mail } from 'lucide-react';
 import ContactItem, { ContactItemProps } from './contact-item';
 import BgGradient from '@/components/bg-gradient';
+import Text from '@/components/text';
 
 
 
@@ -37,8 +38,8 @@ const Contact = () => {
   ];
 
   return (
-    <section id='contact' className='mt-10 relative'>
-      <h2 className='text-center text-5xl'>Get in touch!</h2>
+    <section id='contact' className='py-20 relative'>
+      <Text size="h2" variant="h2">Get in touch!</Text>
       <div className="flex flex-row items-center justify-center my-8 w-full gap-4">
         {contact.map((item, index) => (
           <React.Fragment key={`contact-item-${index}`}>

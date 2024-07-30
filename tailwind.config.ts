@@ -20,6 +20,7 @@ const config = {
     extend: {
       fontFamily: {
         'input-mono': ['input-mono', 'monospace'],
+        'general-sans': ['var(--font-general-sans)', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

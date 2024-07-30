@@ -8,7 +8,18 @@ import { Suspense } from "react";
 import Loading from "./loading";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Logo from "@/components/logo";
+import { Button } from "@/components/ui/button";
+import { ChevronDown } from "lucide-react";
+import localfont from "next/font/local";
+import LangSelection from "@/components/lang-selection";
 
+const generalSans = localfont({
+  src: [{
+    path: "../../public/fonts/GeneralSans-Variable.ttf",
+  }],
+  variable: "--font-general-sans",
+});
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -23,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn("flex flex-col ", inter.className)}>
+      <body style={{height: "100%"}} className={cn("flex flex-col", generalSans.className)}>
         <Analytics />
         <SpeedInsights />
       
@@ -34,8 +45,13 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <nav className="top-0 w-full h-15 z-50 flex justify-end p-2">
-              <ThemeToggle />
+            <nav className="w-full sm:container flex justify-between my-5">
+              <Logo height={80} width={80} />
+              <div className="my-auto flex flex-row gap-2 md:gap-4 mr-2">
+                <LangSelection />
+                <ThemeToggle />
+                <Button className="font-normal">Contact<ChevronDown className="ml-2" /></Button>
+              </div>
             </nav>
             
             <main className="relative p-2 flex justify-center overflow-hidden">
