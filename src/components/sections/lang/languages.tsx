@@ -78,7 +78,7 @@ const languages = [{
   icon: "/images/skills/Flask-Dark.svg",
 }, {
   name: 'RegEx',
-  icon: "/images/skills/RegEx-Dark.svg",
+  icon: "/images/skills/Regex-Dark.svg",
 }, {
   name: 'PyTorch',
   icon: "/images/skills/PyTorch-Dark.svg",
