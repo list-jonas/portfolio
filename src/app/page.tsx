@@ -1,11 +1,12 @@
-import Hero from "@/components/sections/01_hero/hero";
-import About from "@/components/sections/02_about/about";
-import Experience from "@/components/sections/03_experience/experience";
-import TechStack from "@/components/sections/05_tech/tech-stack";
-import Languages from "@/components/sections/06_lang/languages";
-import WhatIdo from "@/components/sections/07_what-i-do/what-i-do";
-import Contact from "@/components/sections/08_contact/contact";
+import Hero from "@/components/sections/hero/hero";
+import About from "@/components/sections/about/about";
+import Experience from "@/components/sections/experience/experience";
+import TechStack from "@/components/sections/tech/tech-stack";
+import Languages from "@/components/sections/lang/languages";
+import WhatIdo from "@/components/sections/what-i-do/what-i-do";
+import Contact from "@/components/sections/contact/contact";
 import { Separator } from "@/components/ui/separator";
+import Testimonials from "@/components/sections/testimonials/testimonials";
 
 export default function Home() {
   return (
@@ -23,6 +24,9 @@ export default function Home() {
       <Separator />
 
       <Languages />
+      <Separator />
+
+      <Testimonials />
       <Separator />
 
       <WhatIdo />

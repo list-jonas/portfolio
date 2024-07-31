@@ -1,5 +1,6 @@
 "use client";
 
+import BgGradient from '@/components/bg-gradient';
 import Text from '@/components/text';
 import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
@@ -93,7 +94,7 @@ const TechStack = () => {
   };
 
   return (
-    <section className='py-20 container'>
+    <section className='py-20 container relative'>
       <Text size="h2" variant="h2">Tech Stack</Text>
       <Text size="p" className='mb-10'>
         Here&apos;s where my creativity meets functionality.
@@ -142,6 +143,8 @@ const TechStack = () => {
           )
         })}
       </div>
+
+      <BgGradient top={-5} left={-10} size={20} color='orange-500' opacity={.1} />
     </section>
   );
 };
