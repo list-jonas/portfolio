@@ -18,12 +18,11 @@ const experience: ExperienceItemProps[] = [{
 }];
 
 const Experience = () => (
-  <div className='py-20 sm:container'>
+  <div className='py-20 container'>
     <Text size="h2" variant="h2">Experience</Text>
     {experience.map((item, index) => (
       <ExperienceItem key={`exp-${index}`} {...item} />
     ))}
-    <Separator />
   </div>
 );
 

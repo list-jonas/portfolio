@@ -93,7 +93,7 @@ const TechStack = () => {
   };
 
   return (
-    <section className='py-20 sm:container'>
+    <section className='py-20 container'>
       <Text size="h2" variant="h2">Tech Stack</Text>
       <Text size="p" className='mb-10'>
         Here&apos;s where my creativity meets functionality.

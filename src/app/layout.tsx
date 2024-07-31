@@ -46,7 +46,7 @@ export default function RootLayout({
           >
             <div className="relative">
               <nav className="absolute top-0 left-0 right-0 z-50 py-5">
-                <div className="w-full sm:container flex justify-between">
+                <div className="w-full container flex justify-between">
                   <Logo height={80} width={80} />
                   <div className="my-auto flex flex-row gap-2 md:gap-4 mr-2">
                     <LangSelection />
@@ -56,7 +56,7 @@ export default function RootLayout({
                 </div>
               </nav>
               
-              <main className="relative p-2 flex justify-center top-36 overflow-x-hidden">
+              <main className="relative flex justify-center top-36 overflow-x-hidden">
                 {children}
               </main>
             </div>

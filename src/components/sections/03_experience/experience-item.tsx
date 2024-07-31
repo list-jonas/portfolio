@@ -11,6 +11,7 @@ export interface ExperienceItemProps {
 const ExperienceItem = ({title, role, date}: ExperienceItemProps) => {
   return (
     <>
+      <Separator />
       <div className="flex flex-col md:flex-row justify-between my-10">
         <Text size="h3">{title}</Text>
         <span className='text-right flex flex-col'>
@@ -18,7 +19,6 @@ const ExperienceItem = ({title, role, date}: ExperienceItemProps) => {
           <Text className="text-muted-foreground">{date}</Text>
         </span>
       </div>
-      <Separator />
     </>
   );
 };

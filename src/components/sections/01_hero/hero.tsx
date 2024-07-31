@@ -4,7 +4,7 @@ import Text from '@/components/text';
 
 const Hero = () => {
   return (
-    <header className='relative py-20 sm:container'>
+    <header className='relative py-20 container'>
       <Text size="h1">
         I&apos;m <Text variant="gradient" className='font-medium'>Jonas List</Text>,
         <br />
