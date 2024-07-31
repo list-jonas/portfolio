@@ -12,7 +12,7 @@
 
 .language-logo-list > div > .language-logo {
   user-select: none;
-  transition: .2s;
+  transition: transform .5s ease, filter .2s ease;
   filter: grayscale(1);
 }
 
