@@ -21,7 +21,21 @@ export const metadata: Metadata = {
   twitter: {
     site: "@jonaslist",
     card: "summary_large_image",
-  }
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://jonaslist.dev",
+    siteName: "Jonas List Portfolio",
+    images: [
+      {
+        url: "https://jonaslist.dev/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Jonas List Portfolio",
+      },
+    ],
+  },
 };
 
 export default async function RootLayout({
