@@ -3,17 +3,18 @@ import { Button } from '../ui/button';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../ui/tooltip';
 import { ChevronDown } from 'lucide-react';
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 const ContactButton = () => {
   const t = useTranslations('Nav');
+  const locale = useLocale();
 
   return (
     <TooltipProvider disableHoverableContent>
       <Tooltip delayDuration={100}>
         <TooltipTrigger asChild>
           <Button className="font-normal" asChild>
-            <Link href="/#contact">{t("contact")}<ChevronDown className="ml-2" /></Link>
+            <Link href={`${locale}/#contact`}>{t("contact")}<ChevronDown className="ml-2" /></Link>
           </Button>
         </TooltipTrigger>
         <TooltipContent side="bottom">{t("contactTooltip")}</TooltipContent>
