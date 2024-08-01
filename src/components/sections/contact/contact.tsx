@@ -52,6 +52,7 @@ const Contact = () => {
           ))}
         </div>
         <Text>{t('copyright')}</Text>
+        <div><a href='/en'>en</a> <a href='/de'>de</a></div>
       </div>
     </footer>
   );

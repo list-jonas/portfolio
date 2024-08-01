@@ -4,8 +4,6 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
   <url>
     <loc>https://jonas-list.vercel.app/en</loc>
     <lastmod>2024-08-01T18:17:01+00:00</lastmod>
@@ -15,5 +13,4 @@
     <loc>https://jonas-list.vercel.app/de</loc>
     <lastmod>2024-08-01T18:17:01+00:00</lastmod>
   </url>
-
 </urlset>
