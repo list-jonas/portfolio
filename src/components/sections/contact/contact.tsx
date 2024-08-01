@@ -52,7 +52,10 @@ const Contact = () => {
           ))}
         </div>
         <Text>{t('copyright')}</Text>
-        <div><a href='/en'>en</a> <a href='/de'>de</a></div>
+        <div>
+          <a href='/en' aria-label='Switch to english page' className='pr-4 py-2'>en</a>
+          <a href='/de' aria-label='Switch to german page' className='pl-4 py-2'>de</a>
+        </div>
       </div>
     </footer>
   );

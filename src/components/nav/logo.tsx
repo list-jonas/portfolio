@@ -3,7 +3,7 @@ import React from 'react';
 
 const Logo = ({ width = 50, height = 50 }) => {
   return (
-    <Link href='/' className='text-primary'>
+    <Link href='/' className='text-primary' aria-label='Logo'>
       <svg
         width={width}
         height={height}
