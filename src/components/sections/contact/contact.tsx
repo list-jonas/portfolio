@@ -57,7 +57,7 @@ const Contact = () => {
           <Text>{t('copyright')}</Text>
           <div className='flex flex-row'>
             {locales.map((lang) => (
-              <Link key={lang.key} href={`/${lang.key}`} locale={lang.key} scroll={false} className='cursor-pointer'>
+              <Link key={lang.key} href={`/${lang.key}`} locale={lang.key} scroll={false} aria-label={lang.key} className='cursor-pointer'>
                 <lang.icon className='h-4 rounded-sm mr-2' />
               </Link>
             ))}
