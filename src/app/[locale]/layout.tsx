@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: "Jonas List Portfolio",
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_SITE_URL}/og-image.png`,
+        url: `${process.env.NEXT_PUBLIC_SITE_URL}/api/og`,
         width: 1200,
         height: 630,
         alt: "Jonas List Portfolio",
