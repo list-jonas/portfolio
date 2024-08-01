@@ -1,15 +1,13 @@
-import dynamic from 'next/dynamic';
+import About from "@/components/sections/about/about";
+import Contact from "@/components/sections/contact/contact";
+import Experience from "@/components/sections/experience/experience";
+import Hero from "@/components/sections/hero/hero";
+import Languages from "@/components/sections/lang/languages";
+import TechStack from "@/components/sections/tech/tech-stack";
+import Testimonials from "@/components/sections/testimonials/testimonials";
+import WhatIdo from "@/components/sections/what-i-do/what-i-do";
 import { Separator } from "@/components/ui/separator";
-import { Suspense } from 'react';
 
-const Hero = dynamic(() => import("@/components/sections/hero/hero"));
-const About = dynamic(() => import("@/components/sections/about/about"));
-const Experience = dynamic(() => import("@/components/sections/experience/experience"));
-const TechStack = dynamic(() => import("@/components/sections/tech/tech-stack"));
-const Languages = dynamic(() => import("@/components/sections/lang/languages"));
-const WhatIdo = dynamic(() => import("@/components/sections/what-i-do/what-i-do"));
-const Contact = dynamic(() => import("@/components/sections/contact/contact"));
-const Testimonials = dynamic(() => import("@/components/sections/testimonials/testimonials"));
 
 export default function Home() {
   return (
@@ -23,26 +21,18 @@ export default function Home() {
       <Experience />
       <Separator />
 
-      <Suspense fallback={<>Tech Stack loading ...</>}>
-        <TechStack />
-      </Suspense>
+      <TechStack />
       <Separator />
 
-      <Suspense fallback={<>Skills in progress ...</>}>
-        <Languages />
-      </Suspense>
+      <Languages />
       <Separator />
 
       <Testimonials />
       <Separator />
 
-      <Suspense fallback={<>What do I do? ...</>}>
-        <WhatIdo />
-      </Suspense>
+      <WhatIdo />
 
-      <Suspense fallback={<>Maybe wait with contacting me ...</>}>
-        <Contact />
-      </Suspense>
+      <Contact />
     </div>
   );
 }
