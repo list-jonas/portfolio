@@ -1,16 +1,16 @@
 import React from 'react';
-import { ChevronRight, ChevronUpCircle, Github, Linkedin, Mail } from 'lucide-react';
+import { ChevronRight, Github, Linkedin, Mail } from 'lucide-react';
 import ContactItem, { ContactItemProps } from './contact-item';
-import BgGradient from '@/components/bg-gradient';
 import Text from '@/components/text';
-
-
+import { useTranslations } from 'next-intl';
 
 const Contact = () => {
+  const t = useTranslations('Contact');
+
   const contact: ContactItemProps[] = [{
       id: 1,
       name: "Email",
-      designation: "Get in touch",
+      designation: t('emailDesignation'),
       color: "bg-red-400 dark:bg-red-500",
       href: "mailto:jonas.list.1289@gmail.com",
       element: (
@@ -19,7 +19,7 @@ const Contact = () => {
     }, {
       id: 2,
       name: "LinkedIn",
-      designation: "Connect",
+      designation: t('linkedinDesignation'),
       color: "bg-blue-400 dark:bg-blue-500",
       href: "https://www.linkedin.com/in/jonas-list-740230289/",
       element: (
@@ -28,7 +28,7 @@ const Contact = () => {
     }, {
       id: 3,
       name: "GitHub",
-      designation: "Contribute",
+      designation: t('githubDesignation'),
       color: "bg-gray-200 dark:bg-gray-900",
       href: "https://github.com/Shadowcrafter88",
       element: (
@@ -40,7 +40,7 @@ const Contact = () => {
   return (
     <footer id='contact' className='py-20 relative bg-secondary'>
       <div className='container'>
-        <Text size="h2" variant="h2">Let&apos;s Get in touch</Text>
+        <Text size="h2" variant="h2">{t('title')}</Text>
         <div className="flex flex-row items-center justify-center my-8 w-full gap-4">
           {contact.map((item, index) => (
             <React.Fragment key={`contact-item-${index}`}>
@@ -51,7 +51,7 @@ const Contact = () => {
           </React.Fragment>
           ))}
         </div>
-        <Text>©2024, All Rights Reserved</Text>
+        <Text>{t('copyright')}</Text>
       </div>
     </footer>
   );

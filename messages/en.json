@@ -1,0 +1,63 @@
+{
+  "Nav": {
+    "lang": "EN",
+    "langTooltip": "Select language",
+    "contact": "Contact",
+    "contactTooltip": "Contact me",
+    "themeTooltip": "Switch theme"
+  },
+  "Hero": {
+    "intro": "I'm",
+    "name": "Jonas List",
+    "profession": "Designer & Developer."
+  },
+  "About": {
+    "title": "About Me",
+    "introduction": "Hello! I'm a passionate",
+    "student": "computer science student",
+    "from": "and aspiring software engineer from",
+    "country": "Austria",
+    "education": "I'm currently in my 5th and final year at",
+    "school": "HTBLA Kaindorf",
+    "specialization": "specializing in web development and software engineering.",
+    "passion": "I love coding and problem-solving, and I enjoy creating fast, accessible, and responsive websites. I'm always eager to learn new technologies and enhance my skills.",
+    "callToAction": "If you're looking for someone passionate about technology, let's connect!"
+  },
+  "Experience": {
+    "title": "Experience"
+  },
+  "TechStack": {
+    "title": "Tech Stack",
+    "description": "Here's where my creativity meets functionality.",
+    "types": {
+      "Frontend": "Frontend",
+      "Backend": "Backend",
+      "FullStack": "Full Stack",
+      "Database": "Database",
+      "Tools": "Tools",
+      "Testing": "Testing"
+    }
+  },
+  "Languages": {
+    "title": "Languages & Tools",
+    "description": "Beyond my main stack, I have written code in multiple programming languages. Each one is a new perspective on problem-solving."
+  },
+  "Testimonials": {
+    "title": "Testimonials",
+    "description": "Here's what my previous employers have to say about me."
+  },
+  "WhatIdo": {
+    "title": "What I Do",
+    "design": "Design",
+    "animation": "Animation",
+    "responsive": "Responsive",
+    "responsiveNote": "(hover / click)"
+  },
+  "Contact": {
+    "title": "Let's Get in Touch",
+    "emailDesignation": "Get in touch",
+    "linkedinDesignation": "Connect",
+    "githubDesignation": "Contribute",
+    "copyright": "©2024, All Rights Reserved"
+  }
+}

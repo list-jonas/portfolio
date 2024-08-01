@@ -1,14 +1,17 @@
 import React from 'react';
 import BgGradient from '@/components/bg-gradient';
 import Text from '@/components/text';
+import { useTranslations } from 'next-intl';
 
 const Hero = () => {
+  const t = useTranslations('Hero');
+
   return (
     <header className='relative py-20 container'>
       <Text size="h1">
-        I&apos;m <Text variant="gradient" className='font-medium'>Jonas List</Text>,
+        {t('intro')} <Text variant="gradient" className='font-medium'>{t('name')}</Text>,
         <br />
-        Designer & Developer.
+        {t('profession')}
       </Text>
 
       <BgGradient top={8} right={-5} size={20} color="red-500" opacity={.1} />

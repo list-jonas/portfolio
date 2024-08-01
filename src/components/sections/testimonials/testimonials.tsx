@@ -2,6 +2,7 @@ import Text from '@/components/text';
 import React from 'react';
 import Testimonial, { TestimonialItemProps } from './testimonial';
 import BgGradient from '@/components/bg-gradient';
+import { useTranslations } from 'next-intl';
 
 const testimonials: TestimonialItemProps[] = [{
   companyName: 'Leder & Schuh AG',
@@ -26,9 +27,12 @@ const testimonials: TestimonialItemProps[] = [{
 }];
 
 const Testimonials = () => {
+  const t = useTranslations('Testimonials');
+
   return (
     <div className='py-20 container relative'>
-      <Text size="h2" variant="h2">Testimonials</Text>
+      <Text size="h2" variant="h2">{t("title")}</Text>
+      <Text size="p" className="mb-4">{t("description")}</Text>
 
       <div className='flex flex-col md:flex-row w-full gap-8'>
         <div className='flex flex-col w-full'>

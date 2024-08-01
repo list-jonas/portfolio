@@ -1,7 +1,7 @@
 import React from 'react';
-import Text from '@/components/text'; // Ensure this path is correct
-import { Separator } from '@radix-ui/react-dropdown-menu';
+import Text from '@/components/text';
 import ExperienceItem, { ExperienceItemProps } from './experience-item';
+import { useTranslations } from 'next-intl';
 
 const experience: ExperienceItemProps[] = [{
   title: 'LSAG Timestamp',
@@ -17,13 +17,17 @@ const experience: ExperienceItemProps[] = [{
   date: 'Jun 2023 - Jul 2023',
 }];
 
-const Experience = () => (
-  <div className='py-20 container'>
-    <Text size="h2" variant="h2">Experience</Text>
-    {experience.map((item, index) => (
-      <ExperienceItem key={`exp-${index}`} {...item} />
-    ))}
-  </div>
-);
+const Experience = () => {
+  const t = useTranslations('Experience');
+
+  return (
+    <div className='py-20 container'>
+      <Text size="h2" variant="h2">{t('title')}</Text>
+      {experience.map((item, index) => (
+        <ExperienceItem key={`exp-${index}`} {...item} />
+      ))}
+    </div>
+  );
+};
 
 export default Experience;

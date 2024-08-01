@@ -5,6 +5,7 @@ import Text from '@/components/text';
 import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
 import { Blocks, CheckCircle, Cloud, Code, Database, GitBranch, Layers } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import React from 'react';
 
 enum ETechStackType {
@@ -88,6 +89,8 @@ const techStack: (TechStackItem)[] = [{
 }];
 
 const TechStack = () => {
+  const t = useTranslations('TechStack');
+
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
@@ -95,9 +98,9 @@ const TechStack = () => {
 
   return (
     <section className='py-20 container relative'>
-      <Text size="h2" variant="h2">Tech Stack</Text>
+      <Text size="h2" variant="h2">{t('title')}</Text>
       <Text size="p" className='mb-10'>
-        Here&apos;s where my creativity meets functionality.
+        {t('description')}
       </Text>
 
       <div className='row-span-2 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-1'>
@@ -110,7 +113,7 @@ const TechStack = () => {
               type === ETechStackType.DATABASE && 'hidden md:block',
               type === ETechStackType.TESTING && 'hidden lg:block',
             )}>
-              {type}
+              {t(`types.${type}`)}
             </div>
           )
         })}

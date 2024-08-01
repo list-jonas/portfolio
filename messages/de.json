@@ -1,0 +1,63 @@
+{
+  "Nav": {
+    "lang": "DE",
+    "langTooltip": "Sprache ändern",
+    "contact": "Kontakt",
+    "contactTooltip": "Kontaktiere mich",
+    "themeTooltip": "Thema ändern"
+  },
+  "Hero": {
+    "intro": "Ich bin",
+    "name": "Jonas List",
+    "profession": "Designer & Entwickler."
+  },
+  "About": {
+    "title": "Über mich",
+    "introduction": "Hallo! Ich bin leidenschaftlicher",
+    "student": "Student der Informatik",
+    "from": "und aufstrebender Softwareentwickler aus",
+    "country": "Österreich",
+    "education": "Ich befinde mich im 5. und letzten Jahr an der",
+    "school": "HTBLA Kaindorf",
+    "specialization": "mit Schwerpunkt auf Webentwicklung und Software Engineering.",
+    "passion": "Ich liebe es, zu programmieren und Probleme zu lösen, und ich erstelle gerne schnelle, zugängliche und responsive Websites. Ich bin immer bereit, neue Technologien zu lernen und meine Fähigkeiten zu erweitern.",
+    "callToAction": "Wenn Sie jemanden suchen, der für Technologie brennt, lassen Sie uns in Kontakt treten!"
+  },
+  "Experience": {
+    "title": "Erfahrung"
+  },
+  "TechStack": {
+    "title": "Technologie-Stack",
+    "description": "Hier trifft meine Kreativität auf Funktionalität.",
+    "types": {
+      "Frontend": "Frontend",
+      "Backend": "Backend",
+      "FullStack": "Full Stack",
+      "Database": "Datenbank",
+      "Tools": "Werkzeuge",
+      "Testing": "Testen"
+    }
+  },
+  "Languages": {
+    "title": "Sprachen & Werkzeuge",
+    "description": "Neben meinem Hauptstack habe ich in verschiedenen Programmiersprachen geschrieben. Jede bietet eine neue Perspektive zur Problemlösung."
+  },
+  "Testimonials": {
+    "title": "Referenzen",
+    "description": "Das sagen meine früheren Arbeitgeber über mich."
+  },
+  "WhatIdo": {
+    "title": "Was ich mache",
+    "design": "Design",
+    "animation": "Animation",
+    "responsive": "Responsive",
+    "responsiveNote": "(hover / klicken)"
+  },
+  "Contact": {
+    "title": "Lass uns in Kontakt treten",
+    "emailDesignation": "Kontakt",
+    "linkedinDesignation": "Verbinden",
+    "githubDesignation": "Beitragen",
+    "copyright": "©2024, Alle Rechte vorbehalten"
+  }
+}

@@ -3,6 +3,7 @@ import Image from 'next/image';
 import React from 'react';
 import Text from '@/components/text';
 import './languages.css';
+import { useTranslations } from 'next-intl';
 
 const languages = [{
   name: 'TypeScript',
@@ -88,12 +89,14 @@ const languages = [{
 }];
 
 const Languages = () => {
+  const t = useTranslations('Languages');
+
   return (
     <section className='relative py-20 flex flex-col w-full'>
       <div className='container mb-12'>
-        <Text size="h2" variant="h2">Languages & Tools</Text>
+        <Text size="h2" variant="h2">{t('title')}</Text>
         <Text size="p">
-          Beyond my main stack, I have written code in multiple programming languages. Each one is a new perspective on problem-solving.
+          {t('description')}
         </Text>
       </div>
 
