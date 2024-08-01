@@ -40,10 +40,10 @@ const Contact = () => {
   ];
 
   return (
-    <footer id='contact' className='py-20 relative bg-secondary'>
+    <footer id='contact' className='pt-20 relative bg-secondary'>
       <div className='container'>
         <Text size="h2" variant="h2">{t('title')}</Text>
-        <div className="flex flex-row items-center justify-center my-8 w-full gap-4">
+        <div className="mt-20 flex flex-row items-center justify-center my-8 w-full gap-4">
           {contact.map((item, index) => (
             <React.Fragment key={`contact-item-${index}`}>
               <ContactItem {...item} />
@@ -53,7 +53,7 @@ const Contact = () => {
           </React.Fragment>
           ))}
         </div>
-        <div className='flex flex-row justify-between'>
+        <div className='mt-28 pb-4 flex flex-row justify-between'>
           <Text>{t('copyright')}</Text>
           <div className='flex flex-row'>
             {locales.map((lang) => (
