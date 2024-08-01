@@ -13,4 +13,19 @@
     <loc>https://jonas-list.vercel.app/de</loc>
     <lastmod>2024-08-01T18:17:01+00:00</lastmod>
   </url>
+
+  <url>
+    <loc>https://jonas-list.vercel.app/it</loc>
+    <lastmod>2024-08-01T18:17:01+00:00</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jonas-list.vercel.app/es</loc>
+    <lastmod>2024-08-01T18:17:01+00:00</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jonas-list.vercel.app/fr</loc>
+    <lastmod>2024-08-01T18:17:01+00:00</lastmod>
+  </url>
 </urlset>

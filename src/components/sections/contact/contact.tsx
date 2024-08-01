@@ -3,6 +3,8 @@ import { ChevronRight, Github, Linkedin, Mail } from 'lucide-react';
 import ContactItem, { ContactItemProps } from './contact-item';
 import Text from '@/components/text';
 import { useTranslations } from 'next-intl';
+import { locales } from '@/lib/locales';
+import Link from 'next/link';
 
 const Contact = () => {
   const t = useTranslations('Contact');
@@ -51,10 +53,15 @@ const Contact = () => {
           </React.Fragment>
           ))}
         </div>
-        <Text>{t('copyright')}</Text>
-        <div>
-          <a href='/en' aria-label='Switch to english page' className='pr-4 py-2'>en</a>
-          <a href='/de' aria-label='Switch to german page' className='pl-4 py-2'>de</a>
+        <div className='flex flex-row justify-between'>
+          <Text>{t('copyright')}</Text>
+          <div className='flex flex-row'>
+            {locales.map((lang) => (
+              <Link key={lang.key} href={`/${lang.key}`} locale={lang.key} scroll={false} className='cursor-pointer'>
+                <lang.icon className='h-4 rounded-sm mr-2' />
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </footer>
