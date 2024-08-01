@@ -1,9 +1,8 @@
 import React from 'react';
 import Logo from './logo';
 import LangSelection from './lang-selection';
-import { ThemeToggle } from './theme/theme-toggle';
-import { Button } from './ui/button';
-import { ChevronDown } from 'lucide-react';
+import { ThemeToggle } from '../theme/theme-toggle';
+import ContactButton from './contact-button';
 
 const Navigation = () => {
   return (
@@ -13,7 +12,7 @@ const Navigation = () => {
         <div className="my-auto flex flex-row flex-wrap gap-2 md:gap-4 mr-2 w-full justify-end">
           <LangSelection />
           <ThemeToggle />
-          <Button className="font-normal" asChild><a href="#contact">Contact<ChevronDown className="ml-2" /></a></Button>
+          <ContactButton />
         </div>
       </div>
     </nav>
