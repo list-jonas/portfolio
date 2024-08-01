@@ -100,15 +100,15 @@ const Languages = () => {
       <div className='language-logo-list relative w-screen flex flex-row [mask-image:linear-gradient(_to_right,_rgba(0,_0,_0,_0),_rgba(0,_0,_0,_1)_20%,_rgba(0,_0,_0,_1)_80%,_rgba(0,_0,_0,_0)_)]'>
         <div className="animate-marquee whitespace-nowrap flex flex-row mx-0 my-3">
           {languages.map((language, index) => (
-            <div key={index} className='px-2 h-[8rem] aspect-square language-logo'>
-              <Image src={language.icon} height={96} width={96} alt={language.name} />
+            <div key={index} className='px-2 h-[7rem] aspect-square language-logo'>
+              <Image src={language.icon} height={128} width={128} alt={language.name} />
             </div>
           ))}
         </div>
         <div className="absolute top-0 animate-marquee2 whitespace-nowrap flex flex-row mx-0 my-3">
           {languages.map((language, index) => (
-            <div key={index} className='px-2 h-[8rem] aspect-square language-logo'>
-              <Image src={language.icon} height={96} width={96} alt={language.name} /> {/* filter grayscale-[100%] */}
+            <div key={index} className='px-2 h-[7rem] aspect-square language-logo'>
+              <Image src={language.icon} height={128} width={128} alt={language.name} /> {/* filter grayscale-[100%] */}
             </div>
           ))}
         </div>
