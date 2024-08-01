@@ -18,6 +18,7 @@
     "@vercel/speed-insights": "^1.0.10",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "country-flag-icons": "^1.5.13",
     "embla-carousel-react": "^8.0.0-rc23",
     "framer-motion": "^11.0.5",
     "lucide-react": "^0.331.0",

@@ -36,25 +36,21 @@ export default async function RootLayout({
       <body style={{height: "100%"}} className={generalSans.className}>
         <Analytics />
         <SpeedInsights />
-      
-        <Suspense fallback={<Loading />} >
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <NextIntlClientProvider messages={messages}>
-              <div className="relative">
-                <Navigation />
-                
-                <main className="relative flex justify-center top-36 overflow-x-hidden">
-                  {children}
-                </main>
-              </div>
-            </NextIntlClientProvider>
-          </ThemeProvider>
-        </Suspense>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <NextIntlClientProvider messages={messages}>
+            <div className="relative">
+              <Navigation />
+              <main className="relative flex justify-center top-36 overflow-x-hidden">
+                {children}
+              </main>
+            </div>
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -3,10 +3,13 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem,
 import { Button } from '../ui/button';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../ui/tooltip';
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
+import { locales } from '@/lib/locales';
 
 const LangSelection = () => {
   const t = useTranslations('Nav');
+  const locale = useLocale();
+  
 
   return (
     <TooltipProvider disableHoverableContent>
@@ -19,21 +22,13 @@ const LangSelection = () => {
           </DropdownMenuTrigger>
           <DropdownMenuContent sideOffset={5} align="start">
             <DropdownMenuGroup>
-              <DropdownMenuItem asChild>
-                <Link href="/en" locale="en">EN</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link href="/de" locale="de">DE</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link href="/fr" locale="fr">FR</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link href="/it" locale="it">IT</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link href="/es" locale="es">ES</Link>
-              </DropdownMenuItem>
+              {locales.map((lang) => (
+                <DropdownMenuItem asChild key={lang.key} className={locale === lang.key ? 'bg-secondary' : ''}>
+                  <Link href={`/${lang.key}`} locale={lang.key} className='cursor-pointer'>
+                    <lang.icon className='h-4 rounded-sm mr-2' /> {lang.key.toUpperCase()}
+                  </Link>
+                </DropdownMenuItem>
+              ))}
             </DropdownMenuGroup>
           </DropdownMenuContent>
         </DropdownMenu>
