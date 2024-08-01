@@ -4,6 +4,7 @@ import { US, DE, FR, IT, ES } from 'country-flag-icons/react/3x2'
 interface Locale {
   key: string;
   icon: FlagComponent;
+  generated?: boolean;
 }
 
 export const locales: Locale[] = [{
@@ -14,13 +15,16 @@ export const locales: Locale[] = [{
   icon: DE
 }, {
   key: 'fr',
-  icon: FR
+  icon: FR,
+  generated: true
 }, {
   key: 'it',
-  icon: IT
+  icon: IT,
+  generated: true
 }, {
   key: 'es',
-  icon: ES
+  icon: ES,
+  generated: true
 }];
 
 export const localesAsStrings = locales.map(locale => locale.key);

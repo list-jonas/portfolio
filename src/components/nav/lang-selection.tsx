@@ -24,7 +24,7 @@ const LangSelection = () => {
             <DropdownMenuGroup>
               {locales.map((lang) => (
                 <DropdownMenuItem asChild key={lang.key} className={locale === lang.key ? 'bg-secondary' : ''}>
-                  <Link href={`/${lang.key}`} locale={lang.key} className='cursor-pointer'>
+                  <Link href={`/${lang.key}`} locale={lang.key} className={lang.generated ? 'cursor-pointer font-light italic' : 'cursor-pointer'}>
                     <lang.icon className='h-4 rounded-sm mr-2' /> {lang.key.toUpperCase()}
                   </Link>
                 </DropdownMenuItem>
