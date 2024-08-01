@@ -35,14 +35,14 @@ const Testimonials = () => {
       <Text size="p" className="mb-4">{t("description")}</Text>
 
       <div className='flex flex-col md:flex-row w-full gap-8'>
-        <div className='flex flex-col w-full'>
+        <div className='flex flex-col w-full gap-8'>
           {/* Every 1 testimonial */}
           {testimonials.map((testimonial, index) => {
             if (index % 2 === 0) return <Testimonial key={`testimonial-${index}`} {...testimonial} />;
             return <></>;
           })}
         </div>
-        <div className='flex flex-col w-full'>
+        <div className='flex flex-col w-full gap-8'>
           {/* Every 2 testimonial */}
           {testimonials.map((testimonial, index) => {
             if (index % 2 === 1) return <Testimonial key={`testimonial-${index}`} {...testimonial} />;

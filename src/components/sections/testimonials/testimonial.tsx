@@ -11,7 +11,7 @@ export interface TestimonialItemProps {
 
 const Testimonial = ({companyLogo, companyName, message, name, role}: TestimonialItemProps) => {
   return (
-    <div className='rounded-3xl border p-4 sm:p-8 xl:p-10 m-2 w-full flex flex-col gap-8'>
+    <div className='rounded-3xl border p-4 sm:p-8 xl:p-10 w-full flex flex-col gap-8'>
       <div>
         <h3 className='text-lg font-bold'>{companyName}</h3>
       </div>
