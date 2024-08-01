@@ -59,5 +59,10 @@
     "linkedinDesignation": "Verbinden",
     "githubDesignation": "Beitragen",
     "copyright": "©2024, Alle Rechte vorbehalten"
+  },
+  "NotFound": {
+    "title": "Seite nicht gefunden",
+    "description": "Entschuldigung, aber diese Seite scheint nicht Teil meines Portfolios zu sein.",
+    "goHome": "Zurück zur Startseite"
   }
 }

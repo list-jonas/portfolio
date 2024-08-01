@@ -59,5 +59,10 @@
     "linkedinDesignation": "Connect",
     "githubDesignation": "Contribute",
     "copyright": "©2024, All Rights Reserved"
+  },
+  "NotFound": {
+    "title": "Page not found",
+    "description": "Sorry, but this page doesn't seem like it is part of my portfolio.",
+    "goHome": "Go back home"
   }
 }
