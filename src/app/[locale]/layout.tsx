@@ -17,7 +17,11 @@ const generalSans = localfont({
 
 export const metadata: Metadata = {
   title: "Jonas List Portfolio",
-  description: "Portfolio of Jonas List, a software engineer based in Austria."
+  description: "Portfolio of Jonas List, a software engineer based in Austria.",
+  twitter: {
+    site: "@jonaslist",
+    card: "summary_large_image",
+  }
 };
 
 export default async function RootLayout({
