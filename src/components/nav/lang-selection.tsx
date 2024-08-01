@@ -25,6 +25,15 @@ const LangSelection = () => {
               <DropdownMenuItem asChild>
                 <Link href="/de" locale="de">DE</Link>
               </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="/fr" locale="fr">FR</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="/it" locale="it">IT</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="/es" locale="es">ES</Link>
+              </DropdownMenuItem>
             </DropdownMenuGroup>
           </DropdownMenuContent>
         </DropdownMenu>

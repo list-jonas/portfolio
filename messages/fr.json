@@ -1,0 +1,68 @@
+{
+  "Nav": {
+    "lang": "FR",
+    "langTooltip": "Choisir la langue",
+    "contact": "Contact",
+    "contactTooltip": "Contactez-moi",
+    "themeTooltip": "Changer de thème"
+  },
+  "Hero": {
+    "intro": "Je suis",
+    "name": "Jonas List",
+    "profession": "Designer & Développeur."
+  },
+  "About": {
+    "title": "À propos de moi",
+    "introduction": "Bonjour! Je suis un passionné",
+    "student": "étudiant en informatique",
+    "from": "et aspirant ingénieur logiciel de",
+    "country": "Autriche",
+    "education": "Je suis actuellement en cinquième et dernière année à",
+    "school": "HTBLA Kaindorf",
+    "specialization": "spécialisé en développement web et en ingénierie logicielle.",
+    "passion": "J'aime coder et résoudre des problèmes, et j'apprécie créer des sites web rapides, accessibles et réactifs. Je suis toujours désireux d'apprendre de nouvelles technologies et d'améliorer mes compétences.",
+    "callToAction": "Si vous cherchez quelqu'un de passionné par la technologie, connectons-nous!"
+  },
+  "Experience": {
+    "title": "Expérience"
+  },
+  "TechStack": {
+    "title": "Stack Technologique",
+    "description": "C'est ici que ma créativité rencontre la fonctionnalité.",
+    "types": {
+      "Frontend": "Frontend",
+      "Backend": "Backend",
+      "FullStack": "Full Stack",
+      "Database": "Base de données",
+      "Tools": "Outils",
+      "Testing": "Tests"
+    }
+  },
+  "Languages": {
+    "title": "Langages & Outils",
+    "description": "Au-delà de ma stack principale, j'ai écrit du code dans plusieurs langages de programmation. Chacun offre une nouvelle perspective sur la résolution de problèmes."
+  },
+  "Testimonials": {
+    "title": "Témoignages",
+    "description": "Voici ce que mes anciens employeurs disent de moi."
+  },
+  "WhatIdo": {
+    "title": "Ce que je fais",
+    "design": "Conception",
+    "animation": "Animation",
+    "responsive": "Réactif",
+    "responsiveNote": "(survol / clic)"
+  },
+  "Contact": {
+    "title": "Entrons en contact",
+    "emailDesignation": "Entrer en contact",
+    "linkedinDesignation": "Se connecter",
+    "githubDesignation": "Contribuer",
+    "copyright": "©2024, Tous droits réservés"
+  },
+  "NotFound": {
+    "title": "Page non trouvée",
+    "description": "Désolé, mais cette page ne semble pas faire partie de mon portfolio.",
+    "goHome": "Retourner à l'accueil"
+  }
+}
