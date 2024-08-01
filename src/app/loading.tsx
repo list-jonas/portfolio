@@ -1,12 +1,13 @@
 "use client";
 
+import Text from '@/components/text';
 import React from 'react';
 
 const Loading = () => {
   return (
-    <div className='flex min-h-screen justify-center items-center'>
-      <iframe src="https://lottie.host/embed/2a83e63c-db51-4db3-905d-534d218bd37c/doVlkknCPd.json"></iframe>
-    </div>
+    <main className="grid min-h-full place-items-center px-6 py-24 sm:py-32 lg:px-8">
+      <h1 className="mt-4 text-3xl font-medium tracking-tight sm:text-5xl"><Text variant="gradient">Loading ...</Text></h1>
+    </main>
   );
 };
 
