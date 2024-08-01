@@ -25,11 +25,11 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://jonaslist.dev",
+    url: "https://jonas-list.vercel.app",
     siteName: "Jonas List Portfolio",
     images: [
       {
-        url: "https://jonaslist.dev/og-image.png",
+        url: "https://jonas-list.vercel.app/og-image.png",
         width: 1200,
         height: 630,
         alt: "Jonas List Portfolio",
