@@ -20,7 +20,7 @@ const LangSelection = () => {
               <Button variant="outline">{t("lang")}</Button>
             </TooltipTrigger>
           </DropdownMenuTrigger>
-          <DropdownMenuContent sideOffset={5} align="start">
+          <DropdownMenuContent sideOffset={5} align="center">
             <DropdownMenuGroup>
               {locales.map((lang) => (
                 <DropdownMenuItem asChild key={lang.key} className={locale === lang.key ? 'bg-secondary' : ''}>
