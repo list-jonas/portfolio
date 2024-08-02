@@ -7,6 +7,8 @@ import localfont from "next/font/local";
 import Navigation from "@/components/nav/nav";
 import { getMessages } from "next-intl/server";
 import {NextIntlClientProvider} from 'next-intl';
+import { Html } from "next/document";
+import Head from "next/head";
 
 const generalSans = localfont({
   src: [{
@@ -48,7 +50,35 @@ export default async function RootLayout({
   const messages = await getMessages();
   
   return (
-    <html lang={locale}>
+    <Html lang={locale}>
+      <Head>
+        {/* Structured Data */}
+        <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Jonas List",
+                "jobTitle": "Freelancer",
+                "description": "Freelancer – Selbstständig",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Hitzendorf",
+                  "addressRegion": "Styria",
+                  "addressCountry": "Austria"
+                },
+                "url": "https://jonas-list.vercel.app/",
+                "sameAs": [
+                  "https://about.me/jonas.list",
+                  "https://www.linkedin.com/in/jonas-list-740230289/",
+                  "https://github.com/list-jonas",
+                  "https://orcid.org/0009-0006-2584-1078"
+                ]
+              })
+            }}
+          />
+      </Head>
       <body style={{height: "100%"}} className={generalSans.className}>
         <Analytics />
         <SpeedInsights />
@@ -68,6 +98,6 @@ export default async function RootLayout({
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>
-    </html>
+    </Ht>
   );
 }
