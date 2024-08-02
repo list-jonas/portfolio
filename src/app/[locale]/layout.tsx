@@ -7,8 +7,6 @@ import localfont from "next/font/local";
 import Navigation from "@/components/nav/nav";
 import { getMessages } from "next-intl/server";
 import {NextIntlClientProvider} from 'next-intl';
-import { Html } from "next/document";
-import Head from "next/head";
 
 const generalSans = localfont({
   src: [{
@@ -50,8 +48,8 @@ export default async function RootLayout({
   const messages = await getMessages();
   
   return (
-    <Html lang={locale}>
-      <Head>
+    <html lang={locale}>
+      <head>
         {/* Structured Data */}
         <script
             type="application/ld+json"
@@ -74,11 +72,23 @@ export default async function RootLayout({
                   "https://www.linkedin.com/in/jonas-list-740230289/",
                   "https://github.com/list-jonas",
                   "https://orcid.org/0009-0006-2584-1078"
-                ]
+                ],
+                "image": "https://jonas-list.vercel.app/images/profile-image.png",
+                "email": "mailto:jonas.list.1289@gmail.com",
+                "alumniOf": {
+                  "@type": "EducationalOrganization",
+                  "name": "HTBLA Kaindorf"
+                },
+                "birthDate": "2005-10-08",
+                "knowsAbout": [
+                  "Software Engineering",
+                  "Web Development",
+                  "Design",
+                ],
               })
             }}
           />
-      </Head>
+      </head>
       <body style={{height: "100%"}} className={generalSans.className}>
         <Analytics />
         <SpeedInsights />
@@ -98,6 +108,6 @@ export default async function RootLayout({
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>
-    </Ht>
+    </html>
   );
 }
