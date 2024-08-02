@@ -32,7 +32,7 @@ const Contact = () => {
       name: "GitHub",
       designation: t('githubDesignation'),
       color: "bg-gray-200 dark:bg-gray-900",
-      href: "https://github.com/Shadowcrafter88",
+      href: "https://github.com/list-jonas",
       element: (
         <Github />
       )
