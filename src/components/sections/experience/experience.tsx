@@ -14,7 +14,7 @@ const experience: ExperienceItemProps[] = [{
 }, {
   title: 'One AI',
   role: 'Backend Developer',
-  date: 'Jun 2023 - Jul 2023',
+  date: 'Jun 2024 - Jul 2024',
 }];
 
 const Experience = () => {
