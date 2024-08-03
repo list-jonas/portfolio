@@ -39,6 +39,7 @@ const Text = React.forwardRef<HTMLElement, TextProps>(
     if (size === 'p') Component = 'p';
     else if (size === 'h1') Component = 'h1';
     else if (size === 'h2') Component = 'h2';
+    else if (size === 'h3') Component = 'h3';
     else Component = 'span';
 
     return (
