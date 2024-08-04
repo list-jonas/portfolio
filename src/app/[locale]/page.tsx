@@ -1,3 +1,4 @@
+import LazyMotionWrapper from "@/components/lazy-motion-wrapper";
 import About from "@/components/sections/about/about";
 import Contact from "@/components/sections/contact/contact";
 import Experience from "@/components/sections/experience/experience";
@@ -21,7 +22,9 @@ export default function Home() {
       <Experience />
       <Separator />
 
-      <TechStack />
+      <LazyMotionWrapper>
+        <TechStack />
+      </LazyMotionWrapper>
       <Separator />
 
       <Languages />
@@ -30,9 +33,13 @@ export default function Home() {
       <Testimonials />
       <Separator />
 
-      <WhatIdo />
+      <LazyMotionWrapper>
+        <WhatIdo />
+      </LazyMotionWrapper>
 
-      <Contact />
+      <LazyMotionWrapper>
+        <Contact />
+      </LazyMotionWrapper>
     </div>
   );
 }

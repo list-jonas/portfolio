@@ -1,6 +1,6 @@
 "use client";
 
-import { Variants, motion,  } from 'framer-motion';
+import { Variants, m  } from 'framer-motion';
 import React from 'react';
 
 export interface ContactItemProps {
@@ -46,7 +46,7 @@ const contactVariants: Variants = {
 
 const ContactItem: React.FC<ContactItemProps> = (item) => {
   return (
-    <motion.a
+    <m.a
       className="relative flex flex-col items-center justify-center p-4"
       initial="offscreen"
       whileInView="onscreen"
@@ -63,12 +63,12 @@ const ContactItem: React.FC<ContactItemProps> = (item) => {
         <span className="text-sm">{item.designation}</span>
       </div>
 
-      <motion.span
+      <m.span
         className={`absolute w-28 h-28 rounded-3xl ${item.color}`}
         variants={contactVariants}
         onHoverStart={(e) => e.preventDefault()}
       />
-    </motion.a>
+    </m.a>
   );
 };
 

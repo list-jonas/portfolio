@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { motion, useAnimationFrame, useMotionValue, useScroll, useSpring, useTransform, useVelocity, wrap } from "framer-motion";
+import { m, useAnimationFrame, useMotionValue, useScroll, useSpring, useTransform, useVelocity, wrap } from "framer-motion";
 
 interface ParallaxProps {
   children: React.ReactNode;
@@ -54,9 +54,9 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
 
   return (
     <div className="parallax" ref={containerRef}>
-      <motion.div className="w-full flex flex-nowrap gap-2" style={{ x }}>
+      <m.div className="w-full flex flex-nowrap gap-2" style={{ x }}>
         {childrenArray}
-      </motion.div>
+      </m.div>
     </div>
   );
 }

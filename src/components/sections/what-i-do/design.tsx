@@ -1,12 +1,11 @@
 "use client";
 
-import { Skeleton } from '@/components/ui/skeleton';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import React from 'react';
 
 const Design = () => {
   return (
-    <motion.div
+    <m.div
       className="bg-white/20 w-[100px] aspect-square rounded-3xl m-auto p-2"
       whileTap={{ scale: 0.9 }}
     >
@@ -15,7 +14,7 @@ const Design = () => {
         <div className="bg-background h-4 w-full rounded-lg" />
         <div className="bg-background h-4 w-3/4 rounded-lg" />
       </div>
-    </motion.div>
+    </m.div>
   );
 };
 

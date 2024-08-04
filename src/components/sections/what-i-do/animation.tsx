@@ -1,6 +1,6 @@
 "use client";
 
-import { Variants, motion } from 'framer-motion';
+import { Variants, m } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
 
 const container: Variants = {
@@ -60,7 +60,7 @@ const Animation = () => {
   }, []);
 
   return (
-    <motion.ul 
+    <m.ul 
       initial="hidden"
       animate={cycle}
       variants={container}
@@ -69,12 +69,12 @@ const Animation = () => {
       className='bg-white/20 w-[100px] aspect-square rounded-3xl m-auto grid grid-cols-2 grid-rows-2 overflow-hidden'
     >
       {[0, 1, 2, 3].map((index) => (
-        <motion.li
+        <m.li
           key={index}
           variants={item}
           className="bg-background w-[35px] aspect-square rounded-full m-auto" />
       ))}
-    </motion.ul>
+    </m.ul>
   );
 };
 

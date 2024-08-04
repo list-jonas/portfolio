@@ -3,7 +3,7 @@
 import BgGradient from '@/components/bg-gradient';
 import Text from '@/components/text';
 import { cn } from '@/lib/utils';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { Blocks, CheckCircle, Cloud, Code, Database, GitBranch, Layers } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import React from 'react';
@@ -125,7 +125,7 @@ const TechStack = () => {
             )}/>;
 
           return (
-            <motion.div 
+            <m.div 
               key={`tech-stack-item-${index}`} 
               className={cn(
                 `rounded-lg shadow-lg cursor-default ${item.color} text-white text-center relative h-12`,
@@ -142,7 +142,7 @@ const TechStack = () => {
             >
               <span className='absolute left-2 top-3'>{item.icon}</span>
               <p className='leading-[3rem]'>{item.name}</p>
-            </motion.div>
+            </m.div>
           )
         })}
       </div>
