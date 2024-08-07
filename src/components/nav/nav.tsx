@@ -4,6 +4,7 @@ import LangSelection from './lang-selection';
 import { ThemeToggle } from '../theme/theme-toggle';
 import ContactButton from './contact-button';
 import Link from 'next/link';
+import CoffeeButton from './coffee-button';
 
 const Navigation = () => {
   return (
@@ -15,6 +16,7 @@ const Navigation = () => {
         <div className="my-auto flex flex-row flex-wrap gap-2 md:gap-4 mr-2 w-full justify-end">
           <LangSelection />
           <ThemeToggle />
+          <CoffeeButton />
           <ContactButton />
         </div>
       </div>

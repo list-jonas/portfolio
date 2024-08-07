@@ -17,7 +17,7 @@ const LangSelection = () => {
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <TooltipTrigger asChild>
-              <Button variant="outline">{t("lang")}</Button>
+              <Button variant="outline" size="icon">{t("lang")}</Button>
             </TooltipTrigger>
           </DropdownMenuTrigger>
           <DropdownMenuContent sideOffset={5} align="center">

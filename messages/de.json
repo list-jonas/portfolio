@@ -4,7 +4,8 @@
     "langTooltip": "Sprache ändern",
     "contact": "Kontakt",
     "contactTooltip": "Kontaktiere mich",
-    "themeTooltip": "Thema ändern"
+    "themeTooltip": "Thema ändern",
+    "coffeeTooltip": "Kauf mir einen Kaffee"
   },
   "Hero": {
     "intro": "Ich bin",
