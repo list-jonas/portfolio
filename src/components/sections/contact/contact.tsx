@@ -5,6 +5,7 @@ import Text from '@/components/text';
 import { useTranslations } from 'next-intl';
 import { locales } from '@/lib/locales';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Contact = () => {
   const t = useTranslations('Contact');
@@ -56,9 +57,12 @@ const Contact = () => {
         <div className='mt-28 pb-4 flex flex-row justify-between'>
           <Text>{t('copyright')}</Text>
           <div className='flex flex-row'>
+            <Link href="https://buymeacoffee.com/jonasl" target='blank' aria-label='Buy me a coffee' className='cursor-pointer mr-2 h-[20px]'>
+              <Image src="/images/bmc-logo-yellow.png" alt="Buy me a coffee" width={24} height={22} className='rounded-sm h-[20px]' />
+            </Link>
             {locales.map((lang) => (
-              <Link key={lang.key} href={`/${lang.key}`} locale={lang.key} scroll={false} aria-label={lang.key} className='cursor-pointer'>
-                <lang.icon className='h-4 rounded-sm mr-2' />
+              <Link key={lang.key} href={`/${lang.key}`} locale={lang.key} scroll={false} aria-label={lang.key} className='cursor-pointer h-[20px]'>
+                <lang.icon className='h-[20px] rounded-sm mr-2' />
               </Link>
             ))}
           </div>
