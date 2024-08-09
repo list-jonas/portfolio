@@ -9,7 +9,6 @@ import Testimonials from "@/components/sections/testimonials/testimonials";
 import WhatIdo from "@/components/sections/what-i-do/what-i-do";
 import { Separator } from "@/components/ui/separator";
 
-
 export default function Home() {
   return (
     <div className="w-screen">

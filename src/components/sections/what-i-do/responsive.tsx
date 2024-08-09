@@ -1,11 +1,10 @@
 "use client";
 
-import * as React from "react";
 import { m } from "framer-motion";
 import { useRef } from "react";
 
 const Responsive = () => {
-  const constraintsRef = useRef(null)
+  const constraintsRef = useRef(null);
 
   return (
     <m.div className="w-full h-full flex justify-center" ref={constraintsRef}>
@@ -17,7 +16,7 @@ const Responsive = () => {
         dragConstraints={constraintsRef}
       />
     </m.div>
-  )
+  );
 };
 
 export default Responsive;

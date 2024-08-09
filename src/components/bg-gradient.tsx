@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface BgGradientProps {
   top?: number;
@@ -15,22 +15,27 @@ const BgGradient: React.FC<BgGradientProps> = ({
   bottom,
   left,
   right,
-  size=10,
-  opacity=.5,
+  size = 10,
+  opacity = 0.5,
   color,
 }) => {
-  const rightOrLeft = right ? {right: `${right}rem`} : {left: `${left}rem`};
-  const topOrBottom = top ? {top: `${top}em`} : {bottom: `${bottom}em`};
+  const rightOrLeft = right ? { right: `${right}rem` } : { left: `${left}rem` };
+  const topOrBottom = top ? { top: `${top}em` } : { bottom: `${bottom}em` };
 
   const styles = {
     ...topOrBottom,
     ...rightOrLeft,
     width: `${size}rem`,
     height: `${size}rem`,
-    opacity: opacity
+    opacity: opacity,
   };
 
-  return <div className={`absolute -z-10 right-3 bg-${color} rounded-full mix-blend-multiply filter blur-3xl`} style={styles} />;
+  return (
+    <div
+      className={`absolute -z-10 right-3 bg-${color} rounded-full mix-blend-multiply filter blur-3xl`}
+      style={styles}
+    />
+  );
 };
 
 export default BgGradient;

@@ -1,15 +1,24 @@
-import React from 'react';
-import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuTrigger } from '../ui/dropdown-menu';
-import { Button } from '../ui/button';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../ui/tooltip';
-import Link from 'next/link';
-import { useLocale, useTranslations } from 'next-intl';
-import { locales } from '@/lib/locales';
+import { locales } from "@/lib/locales";
+import { useLocale, useTranslations } from "next-intl";
+import Link from "next/link";
+import { Button } from "../ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "../ui/dropdown-menu";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "../ui/tooltip";
 
 const LangSelection = () => {
-  const t = useTranslations('Nav');
+  const t = useTranslations("Nav");
   const locale = useLocale();
-  
 
   return (
     <TooltipProvider disableHoverableContent>
@@ -17,15 +26,30 @@ const LangSelection = () => {
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <TooltipTrigger asChild>
-              <Button variant="outline" size="icon">{t("lang")}</Button>
+              <Button variant="outline" size="icon">
+                {t("lang")}
+              </Button>
             </TooltipTrigger>
           </DropdownMenuTrigger>
           <DropdownMenuContent sideOffset={5} align="center">
             <DropdownMenuGroup>
               {locales.map((lang) => (
-                <DropdownMenuItem asChild key={lang.key} className={locale === lang.key ? 'bg-secondary' : ''}>
-                  <Link href={`/${lang.key}`} locale={lang.key} className={lang.generated ? 'cursor-pointer font-light italic' : 'cursor-pointer'}>
-                    <lang.icon className='h-4 rounded-sm mr-2' /> {lang.key.toUpperCase()}
+                <DropdownMenuItem
+                  asChild
+                  key={lang.key}
+                  className={locale === lang.key ? "bg-secondary" : ""}
+                >
+                  <Link
+                    href={`/${lang.key}`}
+                    locale={lang.key}
+                    className={
+                      lang.generated
+                        ? "cursor-pointer font-light italic"
+                        : "cursor-pointer"
+                    }
+                  >
+                    <lang.icon className="h-4 rounded-sm mr-2" />{" "}
+                    {lang.key.toUpperCase()}
                   </Link>
                 </DropdownMenuItem>
               ))}

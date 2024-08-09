@@ -1,7 +1,7 @@
 "use client";
 
-import { Variants, m  } from 'framer-motion';
-import React from 'react';
+import { Variants, m } from "framer-motion";
+import React from "react";
 
 export interface ContactItemProps {
   id: number;
@@ -19,8 +19,8 @@ const getRandomRotation = () => {
 const contactVariants: Variants = {
   offscreen: {
     x: -400,
-    y: getRandomRotation()*3,
-    opacity: 0
+    y: getRandomRotation() * 3,
+    opacity: 0,
   },
   onscreen: {
     x: 0,
@@ -30,8 +30,8 @@ const contactVariants: Variants = {
     transition: {
       type: "spring",
       bounce: 0.4,
-      duration: 0.8
-    }
+      duration: 0.8,
+    },
   },
   hover: {
     y: -10,
@@ -40,8 +40,8 @@ const contactVariants: Variants = {
     transition: {
       type: "spring",
       stiffness: 300,
-    }
-  }
+    },
+  },
 };
 
 const ContactItem: React.FC<ContactItemProps> = (item) => {

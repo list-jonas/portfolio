@@ -1,7 +1,6 @@
 "use client";
 
-import { m } from 'framer-motion';
-import React from 'react';
+import { m } from "framer-motion";
 
 const Design = () => {
   return (
