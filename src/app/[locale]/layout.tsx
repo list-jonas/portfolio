@@ -76,7 +76,7 @@ export default async function RootLayout({
                 "https://github.com/list-jonas",
                 "https://orcid.org/0009-0006-2584-1078",
               ],
-              image: "https://jonas-list.vercel.app/images/profile-image.png",
+              image: "https://jonas-list.vercel.app/images/profile-image.jpg",
               email: "mailto:jonas.list.1289@gmail.com",
               alumniOf: {
                 "@type": "EducationalOrganization",
