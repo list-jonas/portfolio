@@ -29,8 +29,8 @@ export default function Home() {
       <Languages />
       <Separator />
 
-      <Testimonials />
-      <Separator />
+      {/* <Testimonials />
+      <Separator /> */}
 
       <LazyMotionWrapper>
         <WhatIdo />
