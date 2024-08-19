@@ -2,26 +2,28 @@ import { localesAsStrings } from "@/lib/locales";
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const today = "2024-08-19";  // Set today's date manually
+  const hardcodedDate = '2024-08-19';  // Set today's date manually
+
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL; // Base URL from environment
 
   return [
     {
-      url: `${process.env.NEXT_PUBLIC_SITE_URL}/`,
-      priority: 1,
-      lastModified: today,  // Add lastmod
-      alternateRefs: localesAsStrings.map((locale) => ({
-        href: `${process.env.NEXT_PUBLIC_SITE_URL}/${locale}/`,
-        hreflang: locale,
-      })),
+      url: `${baseUrl}/`,
+      lastModified: new Date(hardcodedDate),  // Use manually set date
+      alternates: {
+        languages: Object.fromEntries(
+          localesAsStrings.map((locale) => [locale, `${baseUrl}/${locale}/`])
+        ),
+      },
     },
     ...localesAsStrings.map((locale) => ({
-      url: `${process.env.NEXT_PUBLIC_SITE_URL}/${locale}/`,
-      priority: 0.8,
-      lastModified: today,  // Add lastmod
-      alternateRefs: localesAsStrings.map((altLocale) => ({
-        href: `${process.env.NEXT_PUBLIC_SITE_URL}/${altLocale}/`,
-        hreflang: altLocale,
-      })),
+      url: `${baseUrl}/${locale}/`,
+      lastModified: new Date(hardcodedDate),  // Manually set date
+      alternates: {
+        languages: Object.fromEntries(
+          localesAsStrings.map((altLocale) => [altLocale, `${baseUrl}/${altLocale}/`])
+        ),
+      },
     })),
   ];
 }
