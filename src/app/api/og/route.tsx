@@ -1,7 +1,8 @@
 import Logo from "@/components/nav/logo";
 import { ImageResponse } from "next/og";
+import { NextRequest } from "next/server";
 
-export async function GET(req) {
+export async function GET(req: NextRequest) {
   // Parse the search params from the request URL
   const { searchParams } = new URL(req.url);
   const isDarkMode = searchParams.get("color") === "dark";
