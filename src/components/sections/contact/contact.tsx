@@ -38,9 +38,17 @@ const Contact = () => {
   ];
 
   return (
-    <footer id="contact" className="pt-20 relative bg-secondary">
+    <footer
+      id="contact"
+      className={`relative`}
+      style={{
+        backgroundImage: `radial-gradient(circle, #333 2px, transparent 2px)`,
+        backgroundSize: "50px 50px",
+      }}
+    >
+      <div className="absolute w-full h-full opacity-30 bg-secondary -z-10" />
       <div className="container">
-        <Text size="h2" variant="h2">
+        <Text className="pt-20" size="h2" variant="h2">
           {t("title")}
         </Text>
         <div className="mt-20 flex flex-row items-center justify-center my-8 w-full gap-4">
