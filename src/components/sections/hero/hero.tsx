@@ -1,4 +1,5 @@
 import BgGradient from "@/components/bg-gradient";
+import GradualSpacing from "@/components/magicui/gradual-spacing";
 import Text from "@/components/text";
 import { useTranslations } from "next-intl";
 
@@ -14,7 +15,7 @@ const Hero = () => {
         </Text>
         ,
         <br />
-        {t("profession")}
+        <GradualSpacing className="" text={t("profession")} />
       </Text>
 
       <BgGradient top={8} right={-5} size={20} color="red-500" opacity={0.1} />

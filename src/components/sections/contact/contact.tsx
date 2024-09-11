@@ -1,9 +1,6 @@
 import Text from "@/components/text";
-import { locales } from "@/lib/locales";
 import { ChevronRight, Github, Linkedin, Mail } from "lucide-react";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import ContactItem, { ContactItemProps } from "./contact-item";
 
@@ -61,7 +58,8 @@ const Contact = () => {
           ))}
         </div>
         <div className="mt-28 flex flex-row justify-between">
-          <Text>{t("copyright")}</Text>
+          <Text className="ml-auto">{t("copyright")}</Text>
+          {/*
           <div className="flex flex-row">
             <Link
               href="https://buymeacoffee.com/jonasl"
@@ -90,6 +88,7 @@ const Contact = () => {
               </Link>
             ))}
           </div>
+          */}
         </div>
       </div>
     </footer>
