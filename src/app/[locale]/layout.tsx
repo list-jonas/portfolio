@@ -7,6 +7,7 @@ import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import localfont from "next/font/local";
+import { Suspense } from "react";
 import "./globals.css";
 
 const generalSans = localfont({
@@ -130,7 +131,9 @@ export default async function RootLayout({
               <Navigation />
               <main className="relative flex justify-center top-36 overflow-x-hidden">
                 {children}
-                <ParticlesOverlay />
+                <Suspense fallback={<></>}>
+                  <ParticlesOverlay />
+                </Suspense>
               </main>
             </div>
           </NextIntlClientProvider>
