@@ -47,8 +47,8 @@ const Contact = () => {
       }}
     >
       <div className="absolute w-full h-full opacity-30 bg-secondary -z-10" />
-      <div className="container">
-        <Text className="pt-20" size="h2" variant="h2">
+      <div className="container py-20">
+        <Text size="h2" variant="h2">
           {t("title")}
         </Text>
         <div className="mt-20 flex flex-row items-center justify-center my-8 w-full gap-4">
@@ -61,7 +61,7 @@ const Contact = () => {
             </React.Fragment>
           ))}
         </div>
-        <div className="mt-28 pb-4 flex flex-row justify-between">
+        <div className="mt-28 flex flex-row justify-between">
           <Text>{t("copyright")}</Text>
           <div className="flex flex-row">
             <Link
