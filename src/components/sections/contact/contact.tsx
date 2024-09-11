@@ -40,13 +40,12 @@ const Contact = () => {
   return (
     <footer
       id="contact"
-      className={`relative`}
+      className="relative shadow-muted/20 shadow-[0px_0px_20px_10px] bg-muted/20"
       style={{
-        backgroundImage: `radial-gradient(circle, #333 2px, transparent 2px)`,
+        backgroundImage: `radial-gradient(circle, hsl(var(--muted)) 2px, transparent 2px)`,
         backgroundSize: "50px 50px",
       }}
     >
-      <div className="absolute w-full h-full opacity-30 bg-secondary -z-10" />
       <div className="container py-20">
         <Text size="h2" variant="h2">
           {t("title")}
