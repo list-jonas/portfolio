@@ -1,4 +1,5 @@
 import Navigation from "@/components/nav/nav";
+import ParticlesOverlay from "@/components/particle-overlay";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -129,6 +130,7 @@ export default async function RootLayout({
               <Navigation />
               <main className="relative flex justify-center top-36 overflow-x-hidden">
                 {children}
+                <ParticlesOverlay />
               </main>
             </div>
           </NextIntlClientProvider>
