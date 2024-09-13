@@ -14,7 +14,7 @@ const ParticlesOverlay = () => {
   }, [theme]);
 
   return (
-    <div className="h-full w-full -z-10">
+    <div className="h-full w-full -z-10 max-sm:hidden">
       <Particles
         className="absolute inset-0"
         quantity={100}

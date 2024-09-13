@@ -66,7 +66,7 @@ const Animation = () => {
       variants={container}
       whileTap={{ scale: 0.9 }}
       exit="exit"
-      className="bg-white/20 w-[100px] aspect-square rounded-3xl m-auto grid grid-cols-2 grid-rows-2 overflow-hidden"
+      className="bg-white/20 w-[100px] aspect-square rounded-3xl m-auto grid grid-cols-2 grid-rows-2 overflow-hidden shadow-lg"
     >
       {[0, 1, 2, 3].map((index) => (
         <m.li
