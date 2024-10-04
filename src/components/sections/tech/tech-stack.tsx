@@ -1,114 +1,7 @@
 "use client";
 
-import BgGradient from "@/components/bg-gradient";
 import Text from "@/components/text";
-import { cn } from "@/lib/utils";
-import { m } from "framer-motion";
-import {
-  Blocks,
-  CheckCircle,
-  Cloud,
-  Code,
-  Database,
-  GitBranch,
-  Layers,
-} from "lucide-react";
 import { useTranslations } from "next-intl";
-import React from "react";
-
-enum ETechStackType {
-  FRONTEND = "Frontend",
-  BACKEND = "Backend",
-  FULL_STACK = "Full Stack",
-  DATABASE = "Database",
-  TOOLS = "Tools",
-  TESTING = "Testing",
-}
-
-interface TechStackItem {
-  name?: string;
-  icon?: React.ReactNode;
-  color?: string;
-  type: ETechStackType;
-}
-
-const techStack: TechStackItem[] = [
-  {
-    name: "TypeScript",
-    icon: <Code />,
-    color: "bg-orange-500",
-    type: ETechStackType.FULL_STACK,
-  },
-  {
-    name: "PostgreSQL",
-    icon: <Database />,
-    color: "bg-orange-600",
-    type: ETechStackType.DATABASE,
-  },
-  {
-    name: "Docker",
-    icon: <Blocks />,
-    color: "bg-orange-400",
-    type: ETechStackType.TOOLS,
-  },
-  {
-    name: "Jest",
-    icon: <CheckCircle />,
-    color: "bg-red-400",
-    type: ETechStackType.TESTING,
-  },
-  {
-    name: "NextJS",
-    icon: <Code />,
-    color: "bg-orange-500",
-    type: ETechStackType.FULL_STACK,
-  },
-  {
-    type: ETechStackType.DATABASE,
-  },
-  {
-    name: "GitHub",
-    icon: <GitBranch />,
-    color: "bg-orange-700",
-    type: ETechStackType.TOOLS,
-  },
-  {
-    name: "Cypress",
-    icon: <CheckCircle />,
-    color: "bg-red-500",
-    type: ETechStackType.TESTING,
-  },
-  {
-    name: "TailwindCSS",
-    icon: <Layers />,
-    color: "bg-red-500",
-    type: ETechStackType.FRONTEND,
-  },
-  {
-    name: "Prisma",
-    icon: <Database />,
-    color: "bg-orange-600",
-    type: ETechStackType.BACKEND,
-  },
-  {
-    type: ETechStackType.DATABASE,
-  },
-  {
-    name: "Vercel",
-    icon: <Cloud />,
-    color: "bg-red-600",
-    type: ETechStackType.TOOLS,
-  },
-  {
-    type: ETechStackType.TESTING,
-  },
-  {
-    name: "Shadcn/ui",
-    icon: <Layers />,
-    color: "bg-orange-400",
-    type: ETechStackType.FRONTEND,
-  },
-];
 
 const TechStack = () => {
   const t = useTranslations("TechStack");
@@ -127,66 +20,124 @@ const TechStack = () => {
         {t("description")}
       </Text>
 
-      <div className="row-span-2 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-1">
-        {Object.values(ETechStackType).map((type, index) => {
-          if (type === ETechStackType.FULL_STACK) return null;
-          return (
-            <div
-              key={`tech-stack-type-${index}`}
-              className={cn(
-                "text-center font-bold",
-                type === ETechStackType.TOOLS && "hidden sm:block",
-                type === ETechStackType.DATABASE && "hidden md:block",
-                type === ETechStackType.TESTING && "hidden lg:block"
-              )}
-            >
-              {t(`types.${type}`)}
-            </div>
-          );
-        })}
-        {techStack.map((item, index) => {
-          if (!item.name)
-            return (
-              <div
-                key={`tech-stack-item-${index}`}
-                className={cn(
-                  item.type === ETechStackType.TOOLS && "hidden sm:block",
-                  item.type === ETechStackType.DATABASE && "hidden md:block",
-                  item.type === ETechStackType.TESTING && "hidden lg:block"
-                )}
-              />
-            );
+      {/* https://simpleicons.org/ */}
 
-          return (
-            <m.div
-              key={`tech-stack-item-${index}`}
-              className={cn(
-                `rounded-lg shadow-lg cursor-default ${item.color} text-white text-center relative h-12`,
-                item.type === ETechStackType.FULL_STACK && "col-span-2",
-                item.type === ETechStackType.TOOLS && "hidden sm:block",
-                item.type === ETechStackType.DATABASE && "hidden md:block",
-                item.type === ETechStackType.TESTING && "hidden lg:block"
-              )}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
-              variants={itemVariants}
-              transition={{ duration: 0.3, delay: index * 0.1 }}
-            >
-              <span className="absolute left-2 top-3">{item.icon}</span>
-              <p className="leading-[3rem]">{item.name}</p>
-            </m.div>
-          );
-        })}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 ">
+        <div className="flex items-center gap-3">
+          <div className="size-20 flex items-center justify-center rounded-md bg-accent">
+            <object
+              className="size-10"
+              data="/icons/nextdotjs.svg"
+              width="40"
+              height="40"
+            />
+          </div>
+          <div>
+            <h4 className="text-lg">NextJs</h4>
+            <p className="text-muted-foreground">React Framework</p>
+          </div>
+        </div>
+        <div className="flex items-center gap-3">
+          <div className="size-20 flex items-center justify-center rounded-md bg-accent">
+            <object
+              className="size-10 rounded-lg"
+              data="/icons/typescript.svg"
+              width="40"
+              height="40"
+            />
+          </div>
+          <div>
+            <h4 className="text-lg">TypeScript</h4>
+            <p className="text-muted-foreground">Strongly Typed JavaScript</p>
+          </div>
+        </div>
+        <div className="flex items-center gap-3">
+          <div className="size-20 flex items-center justify-center rounded-md bg-accent">
+            <object
+              className="size-10"
+              data="/icons/git.svg"
+              width="40"
+              height="40"
+            />
+          </div>
+          <div>
+            <h4 className="text-lg">Git</h4>
+            <p className="text-muted-foreground">Version Control System</p>
+          </div>
+        </div>
+        <div className="flex items-center gap-3">
+          <div className="size-20 flex items-center justify-center rounded-md bg-accent">
+            <object
+              className="size-10"
+              data="/icons/docker.svg"
+              width="40"
+              height="40"
+            />
+          </div>
+          <div>
+            <h4 className="text-lg">Docker</h4>
+            <p className="text-muted-foreground">Containerization Platform</p>
+          </div>
+        </div>
+        <div className="flex items-center gap-3">
+          <div className="size-20 flex items-center justify-center rounded-md bg-accent">
+            <object
+              className="size-10"
+              data="/icons/prisma.svg"
+              width="40"
+              height="40"
+            />
+          </div>
+          <div>
+            <h4 className="text-lg">Prisma</h4>
+            <p className="text-muted-foreground">
+              ORM for Node.js &amp; TypeScript
+            </p>
+          </div>
+        </div>
+        <div className="flex items-center gap-3">
+          <div className="size-20 flex items-center justify-center rounded-md bg-accent">
+            <object
+              className="size-10"
+              data="/icons/jest.svg"
+              width="40"
+              height="40"
+            />
+          </div>
+          <div>
+            <h4 className="text-lg">Jest</h4>
+            <p className="text-muted-foreground">Unit Testing</p>
+          </div>
+        </div>
+        <div className="flex items-center gap-3">
+          <div className="size-20 flex items-center justify-center rounded-md bg-accent">
+            <object
+              className="size-10"
+              data="/icons/postgresql.svg"
+              width="40"
+              height="40"
+            />
+          </div>
+          <div>
+            <h4 className="text-lg">PostgreSQL</h4>
+            <p className="text-muted-foreground">Relational Database</p>
+          </div>
+        </div>
+        <div className="flex items-center gap-3">
+          <div className="size-20 flex items-center justify-center rounded-md bg-accent">
+            <object
+              className="size-10"
+              data="/icons/openai.svg"
+              width="40"
+              height="40"
+            />
+          </div>
+          <div>
+            <h4 className="text-lg">ChatGPT</h4>
+            <p className="text-muted-foreground">Speeds up development</p>
+          </div>
+        </div>
       </div>
-
-      <BgGradient
-        top={-5}
-        left={-10}
-        size={20}
-        color="orange-500"
-        opacity={0.1}
-      />
     </section>
   );
 };

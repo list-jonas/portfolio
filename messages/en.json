@@ -14,14 +14,14 @@
   },
   "About": {
     "title": "About Me",
-    "introduction": "Hello! I'm a passionate",
+    "introduction": "Hello! I'm an 18-year-old",
     "student": "computer science student",
-    "from": "and aspiring software engineer from",
+    "from": "and software engineer from",
     "country": "Austria",
     "education": "I'm currently in my 5th and final year at",
     "school": "HTBLA Kaindorf",
     "specialization": "specializing in web development and software engineering.",
-    "passion": "I love coding and problem-solving, and I enjoy creating fast, accessible, and responsive websites. I'm always eager to learn new technologies and enhance my skills.",
+    "passion": "I enjoy coding and problem-solving, and I enjoy creating fast, accessible, and responsive websites. I'm always eager to learn new technologies and enhance my skills.",
     "callToAction": "If you're looking for someone passionate about technology, let's connect!"
   },
   "Experience": {
@@ -29,7 +29,7 @@
   },
   "TechStack": {
     "title": "Tech Stack",
-    "description": "Here's where my creativity meets functionality.",
+    "description": "Tools, resources and software I use daily.",
     "types": {
       "Frontend": "Frontend",
       "Backend": "Backend",
