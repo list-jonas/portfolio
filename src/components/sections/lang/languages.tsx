@@ -1,117 +1,91 @@
 import BgGradient from "@/components/bg-gradient";
 import Text from "@/components/text";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
-import "./languages.css";
 
 const languages = [
   {
     name: "TypeScript",
-    icon: "/images/skills/TypeScript.svg",
+    icon: "/images/skills/typescript.svg",
   },
   {
     name: "Python",
-    icon: "/images/skills/Python-Dark.svg",
+    icon: "/images/skills/python.svg",
   },
   {
     name: "Go",
-    icon: "/images/skills/GoLang.svg",
+    icon: "/images/skills/go.svg",
   },
   {
     name: "Java",
-    icon: "/images/skills/Java-Dark.svg",
-  },
-  {
-    name: "C#",
-    icon: "/images/skills/CS.svg",
-  },
-  {
-    name: "C++",
-    icon: "/images/skills/CPP.svg",
+    icon: "/images/skills/java.svg",
   },
   {
     name: "JavaScript",
-    icon: "/images/skills/JavaScript.svg",
-  },
-  {
-    name: "Swift",
-    icon: "/images/skills/Swift.svg",
-  },
-  {
-    name: "Kotlin",
-    icon: "/images/skills/Kotlin-Dark.svg",
-  },
-  {
-    name: "Rust",
-    icon: "/images/skills/Rust.svg",
+    icon: "/images/skills/javascript.svg",
   },
   {
     name: "PHP",
-    icon: "/images/skills/PHP-Dark.svg",
+    icon: "/images/skills/php.svg",
   },
   {
     name: "PostgreSQL",
-    icon: "/images/skills/PostgreSQL-Dark.svg",
+    icon: "/images/skills/postgresql.svg",
   },
   {
     name: "MongoDB",
-    icon: "/images/skills/MongoDB.svg",
+    icon: "/images/skills/mongodb.svg",
   },
   {
     name: "HTML",
-    icon: "/images/skills/HTML.svg",
+    icon: "/images/skills/html5.svg",
   },
   {
     name: "CSS",
-    icon: "/images/skills/CSS.svg",
+    icon: "/images/skills/css3.svg",
   },
   {
     name: "Markdown",
-    icon: "/images/skills/Markdown-Dark.svg",
-  },
-  {
-    name: "Dart",
-    icon: "/images/skills/Dart-Dark.svg",
+    icon: "/images/skills/markdown.svg",
   },
   {
     name: "NextJS",
-    icon: "/images/skills/NextJS-Dark.svg",
+    icon: "/images/skills/nextdotjs.svg",
   },
   {
     name: "TailwindCSS",
-    icon: "/images/skills/TailwindCSS-Dark.svg",
-  },
-  {
-    name: "Notion",
-    icon: "/images/skills/Notion-Dark.svg",
+    icon: "/images/skills/tailwindcss.svg",
   },
   {
     name: "Figma",
-    icon: "/images/skills/Figma-Dark.svg",
+    icon: "/images/skills/figma.svg",
   },
   {
     name: "Vercel",
-    icon: "/images/skills/Vercel-Dark.svg",
+    icon: "/images/skills/vercel.svg",
   },
   {
     name: "Spring",
-    icon: "/images/skills/Spring-Dark.svg",
-  },
-  {
-    name: "Flask",
-    icon: "/images/skills/Flask-Dark.svg",
-  },
-  {
-    name: "RegEx",
-    icon: "/images/skills/Regex-Dark.svg",
-  },
-  {
-    name: "PyTorch",
-    icon: "/images/skills/PyTorch-Dark.svg",
+    icon: "/images/skills/spring.svg",
   },
   {
     name: "NodeJS",
-    icon: "/images/skills/NodeJS-Dark.svg",
+    icon: "/images/skills/nodedotjs.svg",
+  },
+  {
+    name: "Shadcn/ui",
+    icon: "/images/skills/shadcnui.svg",
+  },
+  {
+    name: "Swift",
+    icon: "/images/skills/swift.svg",
+  },
+  {
+    name: "C++",
+    icon: "/images/skills/cplusplus.svg",
+  },
+  {
+    name: "C#",
+    icon: "/images/skills/csharp.svg",
   },
 ];
 
@@ -128,33 +102,35 @@ const Languages = () => {
       </div>
 
       <div className="language-logo-list relative w-screen flex flex-row [mask-image:linear-gradient(_to_right,_rgba(0,_0,_0,_0),_rgba(0,_0,_0,_1)_20%,_rgba(0,_0,_0,_1)_80%,_rgba(0,_0,_0,_0)_)]">
-        <div className="animate-marquee whitespace-nowrap flex flex-row mx-0 my-3">
+        <div className="animate-marquee whitespace-nowrap flex flex-row mx-0 my-3 text-accent-foreground">
           {languages.map((language, index) => (
             <div
               key={index}
               className="px-2 h-[7rem] aspect-square language-logo"
             >
-              <Image
-                src={language.icon}
-                height={128}
-                width={128}
-                alt={language.name}
+              <object
+                className="size-16 opacity-30"
+                data={language.icon}
+                width="128"
+                height="128"
               />
+              <p className="w-16 text-center">{language.name}</p>
             </div>
           ))}
         </div>
-        <div className="absolute top-0 animate-marquee2 whitespace-nowrap flex flex-row mx-0 my-3">
+        <div className="absolute top-0 animate-marquee2 whitespace-nowrap flex flex-row mx-0 my-3 text-accent-foreground">
           {languages.map((language, index) => (
             <div
               key={index}
               className="px-2 h-[7rem] aspect-square language-logo"
             >
-              <Image
-                src={language.icon}
-                height={128}
-                width={128}
-                alt={language.name}
-              />{" "}
+              <object
+                className="size-16 opacity-30"
+                data={language.icon}
+                width="128"
+                height="128"
+              />
+              <p className="w-16 text-center">{language.name}</p>
               {/* filter grayscale-[100%] */}
             </div>
           ))}
