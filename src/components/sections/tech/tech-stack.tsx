@@ -78,7 +78,7 @@ const TechStack = () => {
           <div key={index} className="flex items-center gap-3">
             <div className="size-20 flex items-center justify-center rounded-md bg-accent">
               <object
-                className="size-10"
+                className="size-10 filter-icon"
                 data={tech.icon}
                 width="40"
                 height="40"

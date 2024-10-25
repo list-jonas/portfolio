@@ -57,3 +57,13 @@
     @apply bg-background text-foreground;
   }
 }
+
+.filter-icon {
+  filter: invert(0) sepia(0) saturate(0) hue-rotate(0deg) brightness(0)
+    contrast(1);
+}
+
+.dark .filter-icon {
+  filter: invert(1) sepia(0) saturate(0) hue-rotate(0deg) brightness(1)
+    contrast(1);
+}
