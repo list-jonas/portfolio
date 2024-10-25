@@ -1,6 +1,7 @@
 import BgGradient from "@/components/bg-gradient";
 import Text from "@/components/text";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 const languages = [
   {
@@ -108,11 +109,12 @@ const Languages = () => {
               key={index}
               className="px-2 h-[7rem] aspect-square language-logo"
             >
-              <object
+              <Image
                 className="size-16 opacity-30 filter-icon"
-                data={language.icon}
-                width="128"
-                height="128"
+                src={language.icon}
+                width={64}
+                height={64}
+                alt={language.name}
               />
               <p className="w-16 text-center">{language.name}</p>
             </div>
@@ -124,14 +126,14 @@ const Languages = () => {
               key={index}
               className="px-2 h-[7rem] aspect-square language-logo"
             >
-              <object
-                className="size-16 opacity-30 filter-icon"
-                data={language.icon}
-                width="128"
-                height="128"
+              <Image
+                className="filter-icon"
+                src={language.icon}
+                width={64}
+                height={64}
+                alt={language.name}
               />
               <p className="w-16 text-center">{language.name}</p>
-              {/* filter grayscale-[100%] */}
             </div>
           ))}
         </div>

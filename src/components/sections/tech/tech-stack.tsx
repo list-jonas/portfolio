@@ -2,6 +2,7 @@
 
 import Text from "@/components/text";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 const techStack = [
   {
@@ -77,11 +78,12 @@ const TechStack = () => {
         {techStack.map((tech, index) => (
           <div key={index} className="flex items-center gap-3">
             <div className="size-20 flex items-center justify-center rounded-md bg-accent">
-              <object
-                className="size-10 filter-icon"
-                data={tech.icon}
-                width="40"
-                height="40"
+              <Image
+                className="filter-icon"
+                src={tech.icon}
+                width={40}
+                height={40}
+                alt={tech.name}
               />
             </div>
             <div>
