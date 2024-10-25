@@ -21,7 +21,7 @@ const experience: ExperienceItemProps[] = [
   {
     title: "BestGrowth",
     role: "Fullstack Developer",
-    date: "Jul 2024 - Oct 2024",
+    date: "Jul 2024 - Now",
   },
 ];
 
