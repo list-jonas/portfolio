@@ -5,7 +5,7 @@ import { m } from "framer-motion";
 const Design = () => {
   return (
     <m.div
-      className="bg-accent/50 w-[100px] aspect-square rounded-3xl m-auto p-2"
+      className="bg-accent/50 w-[100px] aspect-square rounded-3xl m-auto p-2 shadow-lg"
       whileTap={{ scale: 0.9 }}
     >
       <div className="bg-accent-foreground h-8 w-8 rounded-full" />

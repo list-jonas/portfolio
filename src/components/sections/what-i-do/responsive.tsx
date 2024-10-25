@@ -9,7 +9,7 @@ const Responsive = () => {
   return (
     <m.div className="w-full h-full flex justify-center" ref={constraintsRef}>
       <m.div
-        className="bg-accent-foreground w-[100px] aspect-square rounded-3xl m-auto"
+        className="bg-accent-foreground w-[100px] aspect-square rounded-3xl m-auto shadow-lg"
         whileHover={{ scale: 1.2, rotate: 90 }}
         whileTap={{ scale: 0.8, rotate: -90, borderRadius: "100%" }}
         drag
