@@ -20,6 +20,13 @@ const generalSans = localfont({
   variable: "--font-general-sans",
 });
 
+import Hotjar from "@hotjar/browser";
+
+const siteId = 5244022;
+const hotjarVersion = 6;
+
+Hotjar.init(siteId, hotjarVersion);
+
 export const metadata: Metadata = {
   title: "Jonas List Portfolio",
   description: "Portfolio of Jonas List, a software engineer based in Austria.",
@@ -112,6 +119,7 @@ export default async function RootLayout({
           href="/icons/safari-pinned-tab.svg"
           color="#5bbad5"
         />
+
         <link rel="shortcut icon" href="/icons/favicon.ico" />
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-config" content="/icons/browserconfig.xml" />
