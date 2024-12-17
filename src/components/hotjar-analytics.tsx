@@ -14,7 +14,7 @@ const HotjarAnalytics = ({ children }: { children: React.ReactNode }) => {
     });
   }, []);
 
-  return <></>;
+  return <>{children}</>;
 };
 
 export default HotjarAnalytics;
