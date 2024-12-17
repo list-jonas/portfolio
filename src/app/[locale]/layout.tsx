@@ -122,25 +122,26 @@ export default async function RootLayout({
       <body style={{ height: "100%" }} className={generalSans.className}>
         <Analytics />
         <SpeedInsights />
-        <HotjarAnalytics />
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <NextIntlClientProvider messages={messages}>
-            <div className="relative">
-              <Navigation />
-              <main className="relative flex justify-center top-36 overflow-x-hidden">
-                {children}
-                <Suspense fallback={<></>}>
-                  <ParticlesOverlay />
-                </Suspense>
-              </main>
-            </div>
-          </NextIntlClientProvider>
-        </ThemeProvider>
+        <HotjarAnalytics>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <NextIntlClientProvider messages={messages}>
+              <div className="relative">
+                <Navigation />
+                <main className="relative flex justify-center top-36 overflow-x-hidden">
+                  {children}
+                  <Suspense fallback={<></>}>
+                    <ParticlesOverlay />
+                  </Suspense>
+                </main>
+              </div>
+            </NextIntlClientProvider>
+          </ThemeProvider>
+        </HotjarAnalytics>
       </body>
     </html>
   );

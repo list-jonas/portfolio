@@ -6,7 +6,7 @@ import { hotjar } from "react-hotjar";
 const siteId = 5244022;
 const hotjarVersion = 6;
 
-const HotjarAnalytics = () => {
+const HotjarAnalytics = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     hotjar.initialize({
       id: siteId,
