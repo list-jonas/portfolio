@@ -1,3 +1,4 @@
+import HotjarAnalytics from "@/components/hotjar-analytics";
 import Navigation from "@/components/nav/nav";
 import ParticlesOverlay from "@/components/particle-overlay";
 import { ThemeProvider } from "@/components/theme/theme-provider";
@@ -19,13 +20,6 @@ const generalSans = localfont({
 
   variable: "--font-general-sans",
 });
-
-import Hotjar from "@hotjar/browser";
-
-const siteId = 5244022;
-const hotjarVersion = 6;
-
-Hotjar.init(siteId, hotjarVersion);
 
 export const metadata: Metadata = {
   title: "Jonas List Portfolio",
@@ -128,6 +122,7 @@ export default async function RootLayout({
       <body style={{ height: "100%" }} className={generalSans.className}>
         <Analytics />
         <SpeedInsights />
+        <HotjarAnalytics />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
