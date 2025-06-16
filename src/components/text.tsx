@@ -16,6 +16,7 @@ const textVariants = cva("", {
       h1: "text-5xl md:text-6xl lg:text-7xl xl:text-8xl",
       h2: "",
       h3: "text-3xl sm:text-4xl",
+      small: "text-md",
     },
   },
   defaultVariants: {

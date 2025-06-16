@@ -27,6 +27,12 @@
   "Experience": {
     "title": "Expérience"
   },
+  "Education": {
+    "title": "Éducation"
+  },
+  "Work": {
+    "title": "Expérience Professionnelle"
+  },
   "TechStack": {
     "title": "Stack Technologique",
     "description": "Outils, ressources et logiciels que j'utilise quotidiennement.",
@@ -49,10 +55,14 @@
   },
   "WhatIdo": {
     "title": "Ce que je fais",
-    "design": "Conception",
+    "description": "Je me concentre sur la création d'expériences web modernes et conviviales avec une attention aux détails et aux performances.",
+    "design": "Design",
+    "designDescription": "Création d'interfaces utilisateur intuitives et visuellement attrayantes avec des principes de design modernes.",
     "animation": "Animation",
-    "responsive": "Réactif",
-    "responsiveNote": "(survol / clic)"
+    "animationDescription": "Ajout d'animations fluides et de micro-interactions pour améliorer l'expérience utilisateur.",
+    "responsive": "Responsive",
+    "responsiveDescription": "Construction de sites web qui fonctionnent parfaitement sur tous les appareils et tailles d'écran.",
+    "responsiveNote": "(hover / clic)"
   },
   "Contact": {
     "title": "Entrons en contact",

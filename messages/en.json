@@ -27,6 +27,12 @@
   "Experience": {
     "title": "Experience"
   },
+  "Education": {
+    "title": "Education"
+  },
+  "Work": {
+    "title": "Work Experience"
+  },
   "TechStack": {
     "title": "Tech Stack",
     "description": "Tools, resources and software I use daily.",
@@ -48,10 +54,14 @@
     "description": "Here's what my previous employers have to say about me."
   },
   "WhatIdo": {
-    "title": "What I Do",
+    "title": "What I do",
+    "description": "I focus on creating modern, user-friendly web experiences with attention to detail and performance.",
     "design": "Design",
+    "designDescription": "Creating intuitive and visually appealing user interfaces with modern design principles.",
     "animation": "Animation",
+    "animationDescription": "Adding smooth animations and micro-interactions to enhance user experience.",
     "responsive": "Responsive",
+    "responsiveDescription": "Building websites that work seamlessly across all devices and screen sizes.",
     "responsiveNote": "(hover / click)"
   },
   "Contact": {

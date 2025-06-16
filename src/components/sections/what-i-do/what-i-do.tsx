@@ -12,25 +12,47 @@ const WhatIdo = () => {
       <Text size="h2" variant="h2">
         {t("title")}
       </Text>
-      <div className="flex flex-row flex-wrap items-center justify-center my-8 w-full gap-4 text-accent-foreground">
-        <div className="rounded-3xl h-[230px] max-sm:w-full sm:aspect-square bg-accent/50 flex flex-col">
-          <Design />
-          <div className="h-1/4 text-center">
-            <h3 className="text-lg font-bold">{t("design")}</h3>
+      <Text size="p" className="mb-10">
+        {t("description")}
+      </Text>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="group relative overflow-hidden rounded-2xl bg-accent/30 p-6 transition-all duration-300 hover:bg-accent/50 hover:scale-105">
+          <div className="flex flex-col items-center text-center space-y-4">
+            <div className="flex-1 flex items-center justify-center">
+              <Design />
+            </div>
+            <div>
+              <Text size="h3" className="mb-2">
+                {t("design")}
+              </Text>
+            </div>
           </div>
         </div>
 
-        <div className="rounded-3xl h-[230px] max-sm:w-full sm:aspect-square bg-accent/50 flex flex-col">
-          <Animation />
-          <div className="h-1/4 text-center">
-            <h3 className="text-lg font-bold">{t("animation")}</h3>
+        <div className="group relative overflow-hidden rounded-2xl bg-accent/30 p-6 transition-all duration-300 hover:bg-accent/50 hover:scale-105">
+          <div className="flex flex-col items-center text-center space-y-4">
+            <div className="flex-1 flex items-center justify-center">
+              <Animation />
+            </div>
+            <div>
+              <Text size="h3" className="mb-2">
+                {t("animation")}
+              </Text>
+            </div>
           </div>
         </div>
 
-        <div className="rounded-3xl h-[230px] max-sm:w-full sm:aspect-square bg-accent/50 flex flex-col">
-          <Responsive />
-          <div className="h-1/4 text-center">
-            <h3 className="text-lg font-bold">{t("responsive")}</h3>
+        <div className="group relative overflow-hidden rounded-2xl bg-accent/30 p-6 transition-all duration-300 hover:bg-accent/50 hover:scale-105">
+          <div className="flex flex-col items-center text-center space-y-4">
+            <div className="flex-1 flex items-center justify-center">
+              <Responsive />
+            </div>
+            <div>
+              <Text size="h3" className="mb-2">
+                {t("responsive")}
+              </Text>
+            </div>
           </div>
         </div>
       </div>

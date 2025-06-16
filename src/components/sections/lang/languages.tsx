@@ -1,4 +1,5 @@
 import BgGradient from "@/components/bg-gradient";
+import { Marquee } from "@/components/magicui/marquee";
 import Text from "@/components/text";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -102,41 +103,48 @@ const Languages = () => {
         <Text size="p">{t("description")}</Text>
       </div>
 
-      <div className="language-logo-list relative w-screen flex flex-row [mask-image:linear-gradient(_to_right,_rgba(0,_0,_0,_0),_rgba(0,_0,_0,_1)_20%,_rgba(0,_0,_0,_1)_80%,_rgba(0,_0,_0,_0)_)]">
-        <div className="animate-marquee whitespace-nowrap flex flex-row mx-0 my-3">
+      <div className="relative w-screen">
+        <Marquee
+          pauseOnHover
+          className="[--duration:45s] [mask-image:linear-gradient(_to_right,_rgba(0,_0,_0,_0),_rgba(0,_0,_0,_1)_20%,_rgba(0,_0,_0,_1)_80%,_rgba(0,_0,_0,_0)_)]"
+        >
           {languages.map((language, index) => (
             <div
               key={index}
-              className="px-2 h-[7rem] aspect-square language-logo"
+              className="px-2 h-[7rem] aspect-square language-logo flex flex-col items-center justify-center"
             >
               <Image
-                className="size-16 opacity-30 filter-icon"
+                className="size-16 opacity-30 filter-icon mb-2"
                 src={language.icon}
                 width={64}
                 height={64}
                 alt={language.name}
               />
-              <p className="w-16 text-center">{language.name}</p>
+              <p className="w-16 text-center text-sm">{language.name}</p>
             </div>
           ))}
-        </div>
-        <div className="absolute top-0 animate-marquee2 whitespace-nowrap flex flex-row mx-0 my-3">
+        </Marquee>
+        <Marquee
+          reverse
+          pauseOnHover
+          className="[--duration:45s] [mask-image:linear-gradient(_to_right,_rgba(0,_0,_0,_0),_rgba(0,_0,_0,_1)_20%,_rgba(0,_0,_0,_1)_80%,_rgba(0,_0,_0,_0)_)]"
+        >
           {languages.map((language, index) => (
             <div
               key={index}
-              className="px-2 h-[7rem] aspect-square language-logo"
+              className="px-2 h-[7rem] aspect-square language-logo flex flex-col items-center justify-center"
             >
               <Image
-                className="filter-icon"
+                className="size-16 opacity-30 filter-icon mb-2"
                 src={language.icon}
                 width={64}
                 height={64}
                 alt={language.name}
               />
-              <p className="w-16 text-center">{language.name}</p>
+              <p className="w-16 text-center text-sm">{language.name}</p>
             </div>
           ))}
-        </div>
+        </Marquee>
       </div>
 
       <BgGradient

@@ -130,9 +130,9 @@ export default async function RootLayout({
             disableTransitionOnChange
           >
             <NextIntlClientProvider messages={messages}>
-              <div className="relative">
+              <div className="relative flex flex-col">
                 <Navigation />
-                <main className="relative flex justify-center top-36 overflow-x-hidden">
+                <main className="relative flex justify-center overflow-x-hidden">
                   {children}
                   <Suspense fallback={<></>}>
                     <ParticlesOverlay />
