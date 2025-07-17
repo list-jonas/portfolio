@@ -88,6 +88,7 @@ const config = {
       },
     },
   },
+  safelist: ["animate-marquee", "animate-marquee-vertical"],
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
 

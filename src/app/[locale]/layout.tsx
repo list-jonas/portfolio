@@ -1,4 +1,3 @@
-import HotjarAnalytics from "@/components/hotjar-analytics";
 import Navigation from "@/components/nav/nav";
 import ParticlesOverlay from "@/components/particle-overlay";
 import { ThemeProvider } from "@/components/theme/theme-provider";
@@ -122,26 +121,24 @@ export default async function RootLayout({
       <body style={{ height: "100%" }} className={generalSans.className}>
         <Analytics />
         <SpeedInsights />
-        <HotjarAnalytics>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <NextIntlClientProvider messages={messages}>
-              <div className="relative flex flex-col">
-                <Navigation />
-                <main className="relative flex justify-center overflow-x-hidden">
-                  {children}
-                  <Suspense fallback={<></>}>
-                    <ParticlesOverlay />
-                  </Suspense>
-                </main>
-              </div>
-            </NextIntlClientProvider>
-          </ThemeProvider>
-        </HotjarAnalytics>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <NextIntlClientProvider messages={messages}>
+            <div className="relative flex flex-col">
+              <Navigation />
+              <main className="relative flex justify-center overflow-x-hidden">
+                {children}
+                <Suspense fallback={<></>}>
+                  <ParticlesOverlay />
+                </Suspense>
+              </main>
+            </div>
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
