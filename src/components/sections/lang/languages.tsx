@@ -104,10 +104,7 @@ const Languages = () => {
       </div>
 
       <div className="relative w-screen">
-        <Marquee
-          pauseOnHover
-          className="[--duration:45s] [mask-image:linear-gradient(_to_right,_rgba(0,_0,_0,_0),_rgba(0,_0,_0,_1)_20%,_rgba(0,_0,_0,_1)_80%,_rgba(0,_0,_0,_0)_)]"
-        >
+        <Marquee className="[--duration:45s] [mask-image:linear-gradient(_to_right,_rgba(0,_0,_0,_0),_rgba(0,_0,_0,_1)_20%,_rgba(0,_0,_0,_1)_80%,_rgba(0,_0,_0,_0)_)]">
           {languages.map((language, index) => (
             <div
               key={index}
@@ -126,7 +123,6 @@ const Languages = () => {
         </Marquee>
         <Marquee
           reverse
-          pauseOnHover
           className="[--duration:45s] [mask-image:linear-gradient(_to_right,_rgba(0,_0,_0,_0),_rgba(0,_0,_0,_1)_20%,_rgba(0,_0,_0,_1)_80%,_rgba(0,_0,_0,_0)_)]"
         >
           {languages.map((language, index) => (

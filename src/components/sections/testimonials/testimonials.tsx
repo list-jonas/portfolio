@@ -1,8 +1,8 @@
 import BgGradient from "@/components/bg-gradient";
-import Text from "@/components/text";
-import { useTranslations } from "next-intl";
 import { Marquee } from "@/components/magicui/marquee";
+import Text from "@/components/text";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 const reviews = [
   {
@@ -64,7 +64,7 @@ const ReviewCard = ({
         // light styles
         "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
         // dark styles
-        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
+        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
       )}
     >
       <div className="flex flex-row items-center gap-2">
@@ -94,12 +94,12 @@ const Testimonials = () => {
       </Text>
 
       <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
-        <Marquee pauseOnHover className="[--duration:20s]">
+        <Marquee className="[--duration:20s]">
           {firstRow.map((review) => (
             <ReviewCard key={review.username} {...review} />
           ))}
         </Marquee>
-        <Marquee reverse pauseOnHover className="[--duration:20s]">
+        <Marquee reverse className="[--duration:20s]">
           {secondRow.map((review) => (
             <ReviewCard key={review.username} {...review} />
           ))}
