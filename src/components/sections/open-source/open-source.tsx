@@ -18,15 +18,18 @@ const OpenSource = () => {
   const [repos, setRepos] = useState<Repo[]>([]);
 
   useEffect(() => {
-    // Fetch public repositories from GitHub – adjust username as needed
+    // Fetch public repositories from GitHub
     fetch(
-      "https://api.github.com/users/list-jonas/repos?per_page=6&sort=updated"
+      "https://api.github.com/users/list-jonas/repos?per_page=10&sort=updated"
     )
       .then((res) => res.json())
       .then((data) => {
         // Only include non-fork repos and those with description
         const filtered = data.filter((r: any) => !r.fork);
-        setRepos(filtered);
+        const sorted = filtered.sort(
+          (a: Repo, b: Repo) => b.stargazers_count - a.stargazers_count
+        );
+        setRepos(sorted);
       })
       .catch(() => {
         /* silent error */
