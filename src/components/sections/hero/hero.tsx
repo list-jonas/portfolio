@@ -1,5 +1,5 @@
 import BgGradient from "@/components/bg-gradient";
-import GradualSpacing from "@/components/magicui/gradual-spacing";
+import { AuroraText } from "@/components/magicui/aurora-text";
 import Text from "@/components/text";
 import { useTranslations } from "next-intl";
 
@@ -10,12 +10,8 @@ const Hero = () => {
     <header className="relative py-20 container">
       <Text size="h1">
         {t("intro")}{" "}
-        <Text variant="gradient" className="font-medium">
-          {t("name")}
-        </Text>
-        ,
-        <br />
-        <GradualSpacing className="max-sm:text-2xl" text={t("profession")} />
+        <AuroraText className="font-medium">{t("name")}</AuroraText>
+        {", " + t("profession")}
       </Text>
 
       <BgGradient top={8} right={-5} size={20} color="red-500" opacity={0.1} />

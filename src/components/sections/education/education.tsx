@@ -2,26 +2,32 @@ import Text from "@/components/text";
 import { useTranslations } from "next-intl";
 import TimelineItem, { TimelineItemProps } from "../shared/timeline-item";
 
-const education: TimelineItemProps[] = [
-  {
-    title: "HTBLA Kaindorf",
-    subtitle: "HTL",
-    date: "2020-2025",
-  },
-  {
-    title: "Bundesgymnasium Rein",
-    subtitle: "Gymnasium",
-    date: "2016-2020",
-  },
-  {
-    title: "Volkschule Hitzendorf",
-    subtitle: "Volkschule",
-    date: "2012-2016",
-  },
-];
-
 const Education = () => {
   const t = useTranslations("Education");
+
+  const education: TimelineItemProps[] = [
+    {
+      title: "TU Graz",
+      subtitle: t("Education.tuSuptitle"),
+      date: "2025",
+      underlined: true,
+    },
+    {
+      title: "HTBLA Kaindorf",
+      subtitle: "HTL",
+      date: "2020-2025",
+    },
+    {
+      title: "Bundesgymnasium Rein",
+      subtitle: "Gymnasium",
+      date: "2016-2020",
+    },
+    {
+      title: "Volkschule Hitzendorf",
+      subtitle: "Volkschule",
+      date: "2012-2016",
+    },
+  ];
 
   return (
     <section className="py-20 container">

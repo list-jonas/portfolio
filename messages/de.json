@@ -28,7 +28,10 @@
     "title": "Erfahrung"
   },
   "Education": {
-    "title": "Bildung"
+    "title": "Bildung",
+    "Education": {
+      "tuSuptitle": "Universität"
+    }
   },
   "Work": {
     "title": "Berufserfahrung"

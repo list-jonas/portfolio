@@ -6,8 +6,6 @@ const textVariants = cva("", {
   variants: {
     variant: {
       default: "",
-      gradient:
-        "text-transparent bg-clip-text bg-gradient-to-r from-rose-600 via-red-400 to-orange-500",
       h2: "text-secondary-foreground uppercase",
     },
     size: {

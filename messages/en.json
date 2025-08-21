@@ -14,7 +14,7 @@
   },
   "About": {
     "title": "About Me",
-    "introduction": "Hello! I'm an 18-year-old",
+    "introduction": "Hello! I'm an {age}-year-old",
     "student": "computer science student",
     "from": "and software engineer from",
     "country": "Austria",
@@ -28,7 +28,10 @@
     "title": "Experience"
   },
   "Education": {
-    "title": "Education"
+    "title": "Education",
+    "Education": {
+      "tuSuptitle": "University"
+    }
   },
   "Work": {
     "title": "Work Experience"
