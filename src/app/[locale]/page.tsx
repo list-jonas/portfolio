@@ -5,6 +5,7 @@ import Education from "@/components/sections/education/education";
 import Experience from "@/components/sections/experience/experience";
 import Hero from "@/components/sections/hero/hero";
 import Languages from "@/components/sections/lang/languages";
+import OpenSource from "@/components/sections/open-source/open-source";
 import TechStack from "@/components/sections/tech/tech-stack";
 import WhatIdo from "@/components/sections/what-i-do/what-i-do";
 import Work from "@/components/sections/work/work";
@@ -34,6 +35,11 @@ export default function Home() {
       <Separator />
 
       <Work />
+      <Separator />
+
+      <LazyMotionWrapper>
+        <OpenSource />
+      </LazyMotionWrapper>
       <Separator />
 
       <LazyMotionWrapper>
