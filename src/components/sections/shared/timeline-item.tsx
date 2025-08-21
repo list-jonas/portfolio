@@ -21,7 +21,7 @@ const TimelineItem = ({
       <div className="flex flex-col md:flex-row justify-between my-10">
         <Text size="h3">
           {underlined ? (
-            <Highlighter action="underline" color="#E8353D">
+            <Highlighter action="highlight" color="#E8353D">
               {title}
             </Highlighter>
           ) : (
