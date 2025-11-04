@@ -38,10 +38,10 @@ export default function Home() {
       <Work />
       <Separator />
 
-      <LazyMotionWrapper>
+      {/* <LazyMotionWrapper>
         <Testimonials />
       </LazyMotionWrapper>
-      <Separator />
+      <Separator /> */}
 
       <LazyMotionWrapper>
         <OpenSource />
