@@ -77,7 +77,7 @@ export async function GET(req: NextRequest) {
             </p>
           </div>
           <p style={{ marginTop: "auto", fontSize: "2em", color: textColor }}>
-            HTBLA Kaindorf
+            TU Graz · Software Engineering &amp; Management
           </p>
         </div>
       </div>

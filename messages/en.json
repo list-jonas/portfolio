@@ -10,17 +10,17 @@
   "Hero": {
     "intro": "I'm",
     "name": "Jonas List",
-    "profession": "Student & Developer."
+    "profession": "Software Engineering & Management student."
   },
   "About": {
     "title": "About Me",
     "introduction": "Hello! I'm an {age}-year-old",
-    "student": "computer science student",
+    "student": "Software Engineering and Management student",
     "from": "and software engineer from",
     "country": "Austria",
-    "education": "I'm currently in my 5th and final year at",
-    "school": "HTBLA Kaindorf",
-    "specialization": "specializing in web development and software engineering.",
+    "education": "I'm currently studying at",
+    "school": "Graz University of Technology (TU Graz)",
+    "specialization": "with a focus on building reliable web platforms and developer tooling.",
     "passion": "I enjoy coding and problem-solving, and I enjoy creating fast, accessible, and responsive websites. I'm always eager to learn new technologies and enhance my skills.",
     "callToAction": "If you're looking for someone passionate about technology, let's connect!"
   },
@@ -30,7 +30,7 @@
   "Education": {
     "title": "Education",
     "Education": {
-      "tuSuptitle": "University"
+      "tuSuptitle": "BSc · Software Engineering and Management"
     }
   },
   "Work": {

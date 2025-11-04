@@ -63,8 +63,9 @@ export default async function RootLayout({
               "@context": "https://schema.org",
               "@type": "Person",
               name: "Jonas List",
-              jobTitle: "Freelancer",
-              description: "Freelancer – Selbstständig",
+              jobTitle: "Software Engineering & Management Student",
+              description:
+                "Software Engineering & Management student and freelance developer.",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Hitzendorf",
@@ -80,9 +81,10 @@ export default async function RootLayout({
               ],
               image: "https://jonas-list.vercel.app/images/profile-image.jpg",
               email: "mailto:jonas.list.1289@gmail.com",
-              alumniOf: {
+              affiliation: {
                 "@type": "EducationalOrganization",
-                name: "HTBLA Kaindorf",
+                name: "Graz University of Technology (TU Graz)",
+                description: "Software Engineering and Management bachelor program",
               },
               birthDate: "2005-10-08",
               knowsAbout: ["Software Engineering", "Web Development", "Design"],

@@ -1,111 +1,163 @@
+"use client";
+
+import { useEffect, useMemo, useState } from "react";
 import BgGradient from "@/components/bg-gradient";
-import { Marquee } from "@/components/magicui/marquee";
 import Text from "@/components/text";
+import {
+  type CarouselApi,
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 
-const reviews = [
-  {
-    name: "Alexander Kunert",
-    username: "@alexander",
-    body: "Working with Jonas was an absolute pleasure. His attention to detail and technical expertise made our project a huge success.",
-    img: "https://avatar.vercel.sh/alexander",
-  },
+type Testimonial = {
+  name: string;
+  role: string;
+  quote: string;
+  avatar: string;
+};
+
+const testimonials: Testimonial[] = [
   {
     name: "Mario Körbler",
-    username: "@mario",
-    body: "Jonas delivered exceptional work during his internship. His problem-solving skills and dedication were impressive.",
-    img: "https://avatar.vercel.sh/mario",
+    role: "CEO · Körbler GmbH",
+    quote:
+      "Jonas combines initiative with a sharp technical mind. He elevated our internal tooling in just a few weeks and quickly became the go-to person for solving tricky problems.",
+    avatar: "https://avatar.vercel.sh/mario",
   },
   {
-    name: "Sarah Johnson",
-    username: "@sarah",
-    body: "Outstanding developer with great communication skills. Jonas consistently delivered high-quality code on time.",
-    img: "https://avatar.vercel.sh/sarah",
-  },
-  {
-    name: "Michael Chen",
-    username: "@michael",
-    body: "Jonas has a natural talent for creating intuitive user interfaces. His work exceeded our expectations.",
-    img: "https://avatar.vercel.sh/michael",
+    name: "Alexander Kunert",
+    role: "Product Lead · LSAG Timestamp",
+    quote:
+      "He is an exceptional collaborator. Jonas led the frontend architecture and made sure our design system shipped on time while staying pixel perfect.",
+    avatar: "https://avatar.vercel.sh/alexander",
   },
   {
     name: "Emma Wilson",
-    username: "@emma",
-    body: "Reliable, skilled, and always willing to go the extra mile. Jonas is a valuable addition to any team.",
-    img: "https://avatar.vercel.sh/emma",
+    role: "Project Manager · Shadow Share",
+    quote:
+      "From the very first sprint, Jonas delivered production-ready features. His communication is transparent and he never hesitates to propose smarter solutions.",
+    avatar: "https://avatar.vercel.sh/emma",
   },
   {
-    name: "David Rodriguez",
-    username: "@david",
-    body: "Jonas brings fresh ideas and modern development practices. His contributions were instrumental to our success.",
-    img: "https://avatar.vercel.sh/david",
+    name: "Michael Chen",
+    role: "Engineering Lead · BestGrowth",
+    quote:
+      "Jonas has the rare ability to navigate both UX and backend concerns with ease. Our team shipped faster because of his ownership and clean code.",
+    avatar: "https://avatar.vercel.sh/michael",
+  },
+  {
+    name: "Sarah Johnson",
+    role: "HR · Leder & Schuh AG",
+    quote:
+      "Reliable, precise, and curious. Jonas made himself indispensable during his internship and raised the bar for future placements.",
+    avatar: "https://avatar.vercel.sh/sarah",
   },
 ];
 
-const firstRow = reviews.slice(0, reviews.length / 2);
-const secondRow = reviews.slice(reviews.length / 2);
-
-const ReviewCard = ({
-  img,
-  name,
-  username,
-  body,
-}: {
-  img: string;
-  name: string;
-  username: string;
-  body: string;
-}) => {
-  return (
-    <figure
-      className={cn(
-        "relative h-full w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
-        // light styles
-        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
-        // dark styles
-        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
-      )}
-    >
-      <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={img} />
-        <div className="flex flex-col">
-          <figcaption className="text-sm font-medium dark:text-white">
-            {name}
-          </figcaption>
-          <p className="text-xs font-medium dark:text-white/40">{username}</p>
-        </div>
-      </div>
-      <blockquote className="mt-2 text-sm">{body}</blockquote>
-    </figure>
-  );
-};
-
 const Testimonials = () => {
   const t = useTranslations("Testimonials");
+  const [api, setApi] = useState<CarouselApi | null>(null);
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!api) return;
+
+    const updateState = () => {
+      setCurrent(api.selectedScrollSnap());
+      setCount(api.scrollSnapList().length);
+    };
+
+    updateState();
+    api.on("select", updateState);
+    api.on("reInit", updateState);
+
+    return () => {
+      api.off("select", updateState);
+      api.off("reInit", updateState);
+    };
+  }, [api]);
+
+  useEffect(() => {
+    if (!api) return;
+
+    const interval = window.setInterval(() => {
+      api.scrollNext();
+    }, 6000);
+
+    return () => window.clearInterval(interval);
+  }, [api]);
+
+  const indicators = useMemo(() => Array.from({ length: count }), [count]);
 
   return (
-    <div className="py-20 container relative">
+    <section className="py-20 container relative">
       <Text size="h2" variant="h2">
         {t("title")}
       </Text>
-      <Text size="p" className="mb-8">
+      <Text size="p" className="mb-10 max-w-3xl">
         {t("description")}
       </Text>
 
-      <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
-        <Marquee className="[--duration:20s]">
-          {firstRow.map((review) => (
-            <ReviewCard key={review.username} {...review} />
+      <Carousel
+        className="w-full"
+        opts={{ align: "center", loop: true }}
+        setApi={setApi}
+      >
+        <CarouselContent className="pb-10">
+          {testimonials.map((testimonial) => (
+            <CarouselItem
+              key={testimonial.name}
+              className="pl-4 md:basis-1/2 xl:basis-1/3"
+            >
+              <article className="relative h-full rounded-3xl border bg-accent/40 p-6 shadow-sm backdrop-blur-sm transition hover:bg-accent/60">
+                <div className="mb-6 flex items-center gap-3">
+                  <img
+                    src={testimonial.avatar}
+                    alt={testimonial.name}
+                    width={48}
+                    height={48}
+                    className="h-12 w-12 rounded-full object-cover"
+                  />
+                  <div>
+                    <h3 className="text-lg font-semibold">{testimonial.name}</h3>
+                    <p className="text-sm text-muted-foreground">
+                      {testimonial.role}
+                    </p>
+                  </div>
+                </div>
+                <p className="text-base leading-relaxed text-muted-foreground">
+                  {`“${testimonial.quote}”`}
+                </p>
+              </article>
+            </CarouselItem>
           ))}
-        </Marquee>
-        <Marquee reverse className="[--duration:20s]">
-          {secondRow.map((review) => (
-            <ReviewCard key={review.username} {...review} />
-          ))}
-        </Marquee>
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
+        </CarouselContent>
+        <CarouselPrevious className="hidden md:flex -left-6 border-none bg-background/70 shadow-lg hover:bg-background" />
+        <CarouselNext className="hidden md:flex -right-6 border-none bg-background/70 shadow-lg hover:bg-background" />
+      </Carousel>
+
+      <div className="mt-8 flex justify-center gap-2">
+        {indicators.map((_, index) => (
+          <button
+            key={index}
+            type="button"
+            onClick={() => api?.scrollTo(index)}
+            className={cn(
+              "h-2.5 w-6 rounded-full transition",
+              current === index
+                ? "bg-primary"
+                : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
+            )}
+            aria-label={`Go to testimonial ${index + 1}`}
+            aria-pressed={current === index}
+          />
+        ))}
       </div>
 
       <BgGradient
@@ -115,7 +167,7 @@ const Testimonials = () => {
         color="orange-500"
         opacity={0.1}
       />
-    </div>
+    </section>
   );
 };
 

@@ -9,7 +9,7 @@ const Education = () => {
     {
       title: "TU Graz",
       subtitle: t("Education.tuSuptitle"),
-      date: "2025",
+      date: "2024 - Present",
       underlined: true,
     },
     {

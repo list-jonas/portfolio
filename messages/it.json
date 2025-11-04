@@ -10,17 +10,17 @@
   "Hero": {
     "intro": "Sono",
     "name": "Jonas List",
-    "profession": "Studente & Sviluppatore."
+    "profession": "Studente di Software Engineering & Management."
   },
   "About": {
     "title": "Chi sono",
     "introduction": "Ciao! Sono un appassionato",
-    "student": "studente di informatica",
-    "from": "e aspirante ingegnere del software da",
+    "student": "studente di Software Engineering & Management",
+    "from": "e sviluppatore software da",
     "country": "Austria",
-    "education": "Attualmente sono al quinto e ultimo anno presso",
-    "school": "HTBLA Kaindorf",
-    "specialization": "specializzato in sviluppo web e ingegneria del software.",
+    "education": "Attualmente studio presso",
+    "school": "la Technische Universität Graz (TU Graz)",
+    "specialization": "con un focus sulla creazione di piattaforme web affidabili e strumenti per sviluppatori.",
     "passion": "Amo programmare e risolvere problemi, e mi piace creare siti web veloci, accessibili e reattivi. Sono sempre desideroso di apprendere nuove tecnologie e migliorare le mie competenze.",
     "callToAction": "Se stai cercando qualcuno appassionato di tecnologia, connettiamoci!"
   },
@@ -30,7 +30,7 @@
   "Education": {
     "title": "Istruzione",
     "Education": {
-      "tuSuptitle": "Università"
+      "tuSuptitle": "BSc · Software Engineering and Management"
     }
   },
   "Work": {

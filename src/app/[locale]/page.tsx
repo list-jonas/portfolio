@@ -10,6 +10,7 @@ import TechStack from "@/components/sections/tech/tech-stack";
 import WhatIdo from "@/components/sections/what-i-do/what-i-do";
 import Work from "@/components/sections/work/work";
 import { Separator } from "@/components/ui/separator";
+import Testimonials from "@/components/sections/testimonials/testimonials";
 
 export default function Home() {
   return (
@@ -35,6 +36,11 @@ export default function Home() {
       <Separator />
 
       <Work />
+      <Separator />
+
+      <LazyMotionWrapper>
+        <Testimonials />
+      </LazyMotionWrapper>
       <Separator />
 
       <LazyMotionWrapper>
