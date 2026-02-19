@@ -7,7 +7,6 @@ import Hero from "@/components/sections/hero/hero";
 import Languages from "@/components/sections/lang/languages";
 import OpenSource from "@/components/sections/open-source/open-source";
 import TechStack from "@/components/sections/tech/tech-stack";
-import WhatIdo from "@/components/sections/what-i-do/what-i-do";
 import Work from "@/components/sections/work/work";
 import { Separator } from "@/components/ui/separator";
 import Testimonials from "@/components/sections/testimonials/testimonials";
@@ -47,10 +46,6 @@ export default function Home() {
         <OpenSource />
       </LazyMotionWrapper>
       <Separator />
-
-      <LazyMotionWrapper>
-        <WhatIdo />
-      </LazyMotionWrapper>
 
       <LazyMotionWrapper>
         <Contact />
