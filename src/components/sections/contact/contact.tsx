@@ -1,95 +1,74 @@
 import Text from "@/components/text";
-import { ChevronRight, Github, Linkedin, Mail } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
+import { ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";
 import { useTranslations } from "next-intl";
 import React from "react";
-import ContactItem, { ContactItemProps } from "./contact-item";
+
+interface ContactLink {
+  name: string;
+  designation: string;
+  href: string;
+  icon: React.ReactNode;
+}
 
 const Contact = () => {
   const t = useTranslations("Contact");
 
-  const contact: ContactItemProps[] = [
+  const contact: ContactLink[] = [
     {
-      id: 1,
       name: "Email",
       designation: t("emailDesignation"),
-      color: "bg-red-400 dark:bg-red-500",
       href: "mailto:jonas.list.1289@gmail.com",
-      element: <Mail />,
+      icon: <Mail className="w-5 h-5" />,
     },
     {
-      id: 2,
       name: "LinkedIn",
       designation: t("linkedinDesignation"),
-      color: "bg-blue-400 dark:bg-blue-500",
       href: "https://www.linkedin.com/in/jonas-list-740230289/",
-      element: <Linkedin />,
+      icon: <Linkedin className="w-5 h-5" />,
     },
     {
-      id: 3,
       name: "GitHub",
       designation: t("githubDesignation"),
-      color: "bg-gray-200 dark:bg-gray-900",
       href: "https://github.com/list-jonas",
-      element: <Github />,
+      icon: <Github className="w-5 h-5" />,
     },
   ];
 
   return (
-    <footer
-      id="contact"
-      className="relative shadow-muted/20 shadow-[0px_0px_20px_10px] bg-muted/20"
-      style={{
-        backgroundImage: `radial-gradient(circle, hsl(var(--muted)) 2px, transparent 2px)`,
-        backgroundSize: "50px 50px",
-      }}
-    >
-      <div className="container py-20">
-        <Text size="h2" variant="h2">
-          {t("title")}
-        </Text>
-        <div className="mt-20 flex flex-row items-center justify-center my-8 w-full gap-4">
-          {contact.map((item, index) => (
-            <React.Fragment key={`contact-item-${index}`}>
-              <ContactItem {...item} />
-              {index !== contact.length - 1 && (
-                <ChevronRight className="w-10 h-10" />
-              )}
-            </React.Fragment>
-          ))}
-        </div>
-        <div className="mt-28 flex flex-row justify-between">
-          <Text className="ml-auto">{t("copyright")}</Text>
-          {/*
-          <div className="flex flex-row">
-            <Link
-              href="https://buymeacoffee.com/jonasl"
-              target="blank"
-              aria-label="Buy me a coffee"
-              className="cursor-pointer mr-2 h-[20px]"
+    <footer id="contact" className="container py-20">
+      <Text size="h2" variant="h2">
+        {t("title")}
+      </Text>
+
+      <Separator className="mt-10" />
+      <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x">
+        {contact.map((item) => (
+          <a
+            key={item.name}
+            href={item.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex flex-col gap-3 p-6 first:pl-0 last:pr-0"
+          >
+            <div className="flex items-center justify-between gap-2 text-muted-foreground">
+              {item.icon}
+              <ArrowUpRight className="w-4 h-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+            </div>
+            <Text
+              size="h3"
+              className="group-hover:underline underline-offset-4"
             >
-              <Image
-                src="/images/bmc-logo-yellow.png"
-                alt="Buy me a coffee"
-                width={24}
-                height={22}
-                className="rounded-sm h-[20px]"
-              />
-            </Link>
-            {locales.map((lang) => (
-              <Link
-                key={lang.key}
-                href={`/${lang.key}`}
-                locale={lang.key}
-                scroll={false}
-                aria-label={lang.key}
-                className="cursor-pointer h-[20px]"
-              >
-                <lang.icon className="h-[20px] rounded-sm mr-2" />
-              </Link>
-            ))}
-          </div>
-          */}
-        </div>
+              {item.name}
+            </Text>
+            <Text className="text-muted-foreground">{item.designation}</Text>
+          </a>
+        ))}
+      </div>
+      <Separator />
+
+      <div className="mt-10 flex flex-row justify-end">
+        <Text className="text-muted-foreground">{t("copyright")}</Text>
       </div>
     </footer>
   );
