@@ -1,6 +1,7 @@
 "use client";
 
 import Text from "@/components/text";
+import { Separator } from "@/components/ui/separator";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
@@ -70,25 +71,27 @@ const TechStack = () => {
       <Text size="h2" variant="h2">
         {t("title")}
       </Text>
-      <Text size="p" className="mb-10">
-        {t("description")}
-      </Text>
+      <Text size="p">{t("description")}</Text>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-3">
+      <Separator className="mt-10" />
+      <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 border-l">
         {techStack.map((tech, index) => (
-          <div key={index} className="flex items-center gap-3">
-            <div className="size-20 flex items-center justify-center rounded-md bg-accent">
-              <Image
-                className="filter-icon"
-                src={tech.icon}
-                width={40}
-                height={40}
-                alt={tech.name}
-              />
-            </div>
-            <div>
-              <h4 className="text-lg">{tech.name}</h4>
-              <p className="text-muted-foreground">{tech.description}</p>
+          <div
+            key={index}
+            className="flex items-center gap-3 p-6 border-r border-b"
+          >
+            <Image
+              className="filter-icon shrink-0"
+              src={tech.icon}
+              width={32}
+              height={32}
+              alt={tech.name}
+            />
+            <div className="min-w-0">
+              <h4 className="text-md truncate">{tech.name}</h4>
+              <p className="text-sm text-muted-foreground truncate">
+                {tech.description}
+              </p>
             </div>
           </div>
         ))}
