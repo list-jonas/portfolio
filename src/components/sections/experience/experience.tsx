@@ -22,6 +22,7 @@ const experience: TimelineItemProps[] = [
     title: "SimpliServ",
     subtitle: "Fullstack Developer",
     date: "Jul 2024 - Now",
+    href: "https://simpliserv.com",
   },
 ];
 
