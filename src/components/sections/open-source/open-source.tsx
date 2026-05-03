@@ -41,44 +41,43 @@ const OpenSource = () => {
         Open Source Contributions
       </Text>
 
-      {repos.map((repo) => (
-        <a
-          key={repo.id}
-          href={repo.html_url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block group"
-        >
-          <Separator />
-          <div className="flex flex-col md:flex-row justify-between my-10 gap-4">
-            <div className="flex flex-col gap-2 md:max-w-[60%]">
+      <Separator className="mt-10" />
+      <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x">
+        {repos.map((repo) => (
+          <a
+            key={repo.id}
+            href={repo.html_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex flex-col gap-3 p-6 first:pl-0 last:pr-0"
+          >
+            <div className="flex items-center justify-between gap-2">
               <Text
                 size="h3"
                 className="group-hover:underline underline-offset-4"
               >
                 {repo.name}
               </Text>
-              {repo.description && (
-                <Text className="text-muted-foreground">
-                  {repo.description}
-                </Text>
-              )}
-            </div>
-            <span className="text-right flex flex-col gap-2 items-end">
-              <span className="flex items-center gap-3 text-muted-foreground">
-                {repo.language && (
-                  <Text className="text-md">{repo.language}</Text>
-                )}
-                <span className="flex items-center gap-1">
-                  <Star className="w-4 h-4" />
-                  <Text className="text-md">{repo.stargazers_count}</Text>
-                </span>
-                <Github className="w-4 h-4" />
+              <span className="flex items-center gap-1 text-muted-foreground">
+                <Star className="w-4 h-4" />
+                <Text className="text-md">{repo.stargazers_count}</Text>
               </span>
+            </div>
+            {repo.description && (
+              <Text className="text-muted-foreground flex-1">
+                {repo.description}
+              </Text>
+            )}
+            <span className="flex items-center gap-3 text-muted-foreground mt-2">
+              {repo.language && (
+                <Text className="text-sm">{repo.language}</Text>
+              )}
+              <Github className="w-4 h-4 ml-auto" />
             </span>
-          </div>
-        </a>
-      ))}
+          </a>
+        ))}
+      </div>
+      <Separator />
     </section>
   );
 };
