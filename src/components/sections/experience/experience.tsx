@@ -19,7 +19,7 @@ const experience: TimelineItemProps[] = [
     date: "Jun 2024 - Jul 2024",
   },
   {
-    title: "BestGrowth",
+    title: "SimpliServ",
     subtitle: "Fullstack Developer",
     date: "Jul 2024 - Now",
   },
